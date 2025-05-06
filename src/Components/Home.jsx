@@ -28,7 +28,7 @@ const Home = () => {
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="/images/australia.jpg" 
+            src="./images/australia.jpg" 
             alt="Consultancy Team"
             className="rounded-xl shadow-lg w-full object-cover"
           />
