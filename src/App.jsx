@@ -5,9 +5,7 @@ import AboutUs from './Components/AboutUs.jsx';
 import Contact from './Components/Contact.jsx';
 import Australia from './Components/studyin/Australia.jsx';
 
-import { HashRouter } from 'react-router-dom';
-
-
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 
 function App() {
