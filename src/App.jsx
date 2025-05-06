@@ -5,12 +5,14 @@ import AboutUs from './Components/AboutUs.jsx';
 import Contact from './Components/Contact.jsx';
 import Australia from './Components/studyin/Australia.jsx';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+
+
 
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,7 +23,7 @@ function App() {
 
         {/* You can define more routes here */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
