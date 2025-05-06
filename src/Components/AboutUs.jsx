@@ -88,19 +88,19 @@ const AboutUs = () => {
               {
                 name: 'Nischal Devkota',
                 role: 'Chief Executive Officer (CEO)',
-                photo: '/images/ceo.jpg',
+                photo: './images/ceo.jpg',
                 bio: 'Visionary leader with 15+ years in international education consulting. Passionate about student success.',
               },
               {
                 name: 'Sunita Koirala',
                 role: 'Chief Operating Officer (COO)',
-                photo: '/images/coo.jpg',
+                photo: './images/coo.jpg',
                 bio: 'Operational expert ensuring seamless service delivery and student satisfaction across all branches.',
               },
               {
                 name: 'Ramesh Thapa',
                 role: 'Managing Director',
-                photo: '/images/managing director.jpg',
+                photo: './images/managing director.jpg',
                 bio: 'Strategic thinker driving innovation, global partnerships, and consultancy growth across regions.',
               },
             ].map(({ name, role, photo, bio }) => (

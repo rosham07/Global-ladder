@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-  <img src="/images/logo.jpg" alt="Logo" className="h-10 w-10" />
+  <img src="./images/logo.jpg" alt="Logo" className="h-10 w-10" />
   <span className="text-xl font-semibold text-purple">Global Ladder<br/>Education Network</span>
 </Link>
 
