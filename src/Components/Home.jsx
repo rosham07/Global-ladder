@@ -7,7 +7,7 @@ const Home = () => {
       {/* Main Section */}
       <section
         className="relative h-[80vh] flex items-center justify-center text-white bg-cover bg-center"
-        style={{ backgroundImage: `url(/images/view.jpg)` }} 
+        style={{ backgroundImage: `url(./images/view.jpg)` }} 
       >
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">

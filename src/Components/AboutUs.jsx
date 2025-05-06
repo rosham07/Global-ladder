@@ -18,7 +18,7 @@ const AboutUs = () => {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="/images/about.jpg"
+            src="./images/about.jpg"
             alt="Consultancy Team"
             className="rounded-2xl shadow-xl w-full h-auto object-cover"
           />
