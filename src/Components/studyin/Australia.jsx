@@ -17,14 +17,22 @@ const Australia = () => {
 
         {/* Study Details */}
         <p className="text-lg leading-relaxed mb-4">
-          Australia is one of the most sought-after destinations for international students, known for its world-class education system, welcoming culture, and beautiful landscapes. With over 1,100 institutions and 22,000 courses, students can choose from a wide variety of academic options.
+        Studying in Australia offers international students a unique combination of high-quality education, 
+        cultural diversity, and career opportunities. Australian universities consistently rank among the best 
+        in the world, providing degrees that are globally recognized and respected. The education system emphasizes
+         practical knowledge, innovation, and research, making graduates highly employable. One of the biggest attractions
+          is the opportunity to work part-time during studies and full-time during breaks, which helps students support 
+          themselves financially and gain valuable experience. After graduation, students can apply for post-study work 
+          visas, giving them the chance to live and work in Australia and potentially apply for permanent residency.
         </p>
-        <p className="text-lg leading-relaxed mb-4">
-          Australian universities such as <span className="font-semibold">University of Melbourne, Australian National University, and University of Sydney</span> rank consistently in the global top 100. The country emphasizes quality education, research excellence, and innovative learning environments.
+        <p className='text-lg leading-relaxed mb-4'>
+        Moreover, Australia is an English-speaking country, which helps students improve their language skills and integrate more easily. With its multicultural society,
+       students from all backgrounds feel welcome, and cities like Sydney, Melbourne, and Brisbane offer a high standard of living, excellent public transport, and access
+        to stunning natural beauty. Australia’s safe and friendly environment, along with a relaxed lifestyle, makes it an ideal destination for students seeking a balance
+         between academic success and personal well-being.
+       
         </p>
-        <p className="text-lg leading-relaxed mb-4">
-          Students benefit from a safe, multicultural society, strong post-study work rights (up to 4 years), and opportunities for permanent residency under skilled migration programs. The cost of living is moderate compared to the UK or USA, and students can work part-time up to 48 hours per fortnight during study sessions.
-        </p>
+        
         <p className="text-lg leading-relaxed mb-4 italic text-blue-700">
           "Australia isn’t just a place to study — it’s a place to grow, connect, and build a future."
         </p>
