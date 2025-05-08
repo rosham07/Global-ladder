@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isStudyInOpen, setIsStudyInOpen] = useState(false);
+  const [isTestPrepOpen, setIsTestPrepOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -15,6 +16,14 @@ const Navbar = () => {
     { name: 'Ireland', path: '/studyin/ireland' },
     { name: 'New Zealand', path: '/studyin/newzealand' },
     { name: 'USA', path: '/studyin/usa' },
+  ];
+
+  const testPrepItems = [
+    { name: 'IELTS', path: '/testpreparation/ielts' },
+    { name: 'PTE', path: '/testpreparation/pte' },
+    { name: 'TOEFL', path: '/testpreparation/toefl' },
+    { name: 'GRE', path: '/testpreparation/gre' },
+    { name: 'SAT', path: '/testpreparation/sat' },
   ];
 
   const mainNavItems = [
@@ -28,10 +37,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-  <img src="./images/logo.jpg" alt="Logo" className="h-10 w-10" />
-  <span className="text-xl font-semibold text-purple">Global Ladder<br/>Education Network</span>
-</Link>
-
+          <img src="./images/logo.jpg" alt="Logo" className="h-10 w-10" />
+          <span className="text-xl font-semibold text-purple">
+            Global Ladder<br />Education Network
+          </span>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 items-center">
@@ -67,13 +77,31 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Call Now
-          <a
-            href="tel:+1234567890"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-          >
-            Call Now
-          </a> */}
+          {/* Test Preparation Dropdown */}
+          <div className="relative group">
+            <button
+              className="flex items-center text-gray-700 hover:text-blue-600 focus:outline-none"
+              onClick={() => setIsTestPrepOpen(!isTestPrepOpen)}
+            >
+              Test Preparation <ChevronDown className="ml-1 w-4 h-4" />
+            </button>
+            <div
+              className={`absolute left-0 mt-2 w-48 bg-white border shadow-md rounded ${
+                isTestPrepOpen ? 'block' : 'hidden'
+              } group-hover:block`}
+              onMouseLeave={() => setIsTestPrepOpen(false)}
+            >
+              {testPrepItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
         </nav>
 
         {/* Mobile Toggle */}
@@ -92,6 +120,7 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
+
           {/* Study In Dropdown (Mobile) */}
           <div>
             <p className="font-medium text-gray-700 mt-2">Study In</p>
@@ -109,8 +138,25 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Test Preparation Dropdown (Mobile) */}
+          <div>
+            <p className="font-medium text-gray-700 mt-2">Test Preparation</p>
+            <div className="pl-4 space-y-1">
+              {testPrepItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="block text-gray-600 hover:text-blue-600"
+                  onClick={toggleMenu}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <a
-            href="tel:+1234567890"
+            href="tel:+977 9700616287"
             className="block bg-blue-600 text-white px-4 py-2 rounded text-center"
           >
             Call Now
