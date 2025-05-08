@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/Global-ladder/', // ← 👈 Add this line with your repo name
+  base: '/Global-ladder/', 
   plugins: [react(), tailwindcss()],
 })
 
