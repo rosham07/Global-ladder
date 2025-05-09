@@ -2,13 +2,26 @@ import React from "react";
 
 const NewZealand = () => {
   return (
-    <section className="bg-white pt-32 pb-16 px-6 md:px-16 text-gray-800 font-sans">
-      <div className="max-w-5xl mx-auto space-y-16">
+    <section className="bg-gray-100 text-gray-800 font-sans">
+      {/* Hero Section */}
+      <div className="bg-green-700 text-white py-20 px-6 md:px-16 text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
+          Study in New Zealand
+        </h1>
+        <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+          Start your academic journey in one of the world’s most beautiful and welcoming countries.
+        </p>
+        <button className="bg-white text-green-700 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
+          Get Started
+        </button>
+      </div>
+
+      <div className="max-w-5xl mx-auto pt-16 pb-16 px-6 md:px-16 space-y-16">
         {/* Title */}
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-green-700 mb-4">
-            Study in New Zealand: A Complete Guide for Nepali Students
-          </h1>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-green-700 mb-4">
+            A Complete Guide for Nepali Students
+          </h2>
           <p className="text-lg md:text-xl text-gray-600">
             Discover why New Zealand is a top study destination and how you can make your study dream a reality.
           </p>
@@ -30,29 +43,36 @@ const NewZealand = () => {
         <div>
           <h2 className="text-3xl font-semibold text-green-600 mb-4">Benefits of Studying in New Zealand for Nepali Students</h2>
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="p-6 border rounded-xl shadow-sm bg-green-50">
-              <h3 className="font-semibold text-xl mb-2">High-Quality Education</h3>
-              <p>New Zealand’s education system is world-class, offering a diverse range of programs to meet global industry standards.</p>
-            </div>
-            <div className="p-6 border rounded-xl shadow-sm bg-green-50">
-              <h3 className="font-semibold text-xl mb-2">Work While Studying</h3>
-              <p>International students can work up to 20 hours a week during terms and 40 hours during breaks.</p>
-            </div>
-            <div className="p-6 border rounded-xl shadow-sm bg-green-50">
-              <h3 className="font-semibold text-xl mb-2">Post-Graduation Work Visa</h3>
-              <p>New Zealand offers a work visa for up to 3 years after graduation, allowing you to gain valuable work experience.</p>
-            </div>
-            <div className="p-6 border rounded-xl shadow-sm bg-green-50">
-              <h3 className="font-semibold text-xl mb-2">Affordable Cost of Living</h3>
-              <p>Compared to other English-speaking countries, New Zealand offers a relatively affordable cost of living.</p>
-            </div>
+            {[
+              {
+                title: "High-Quality Education",
+                desc: "New Zealand’s education system is world-class, offering a diverse range of programs to meet global industry standards."
+              },
+              {
+                title: "Work While Studying",
+                desc: "International students can work up to 20 hours a week during terms and 40 hours during breaks."
+              },
+              {
+                title: "Post-Graduation Work Visa",
+                desc: "New Zealand offers a work visa for up to 3 years after graduation, allowing you to gain valuable work experience."
+              },
+              {
+                title: "Affordable Cost of Living",
+                desc: "Compared to other English-speaking countries, New Zealand offers a relatively affordable cost of living."
+              },
+            ].map((benefit, index) => (
+              <div key={index} className="p-6 border rounded-xl shadow-sm bg-white">
+                <h3 className="font-semibold text-xl mb-2">{benefit.title}</h3>
+                <p>{benefit.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Top Universities */}
         <div>
           <h2 className="text-3xl font-semibold text-green-600 mb-4">Top Universities in New Zealand for Nepali Students</h2>
-          <table className="w-full table-auto text-left border-collapse">
+          <table className="w-full table-auto text-left border-collapse bg-white shadow-sm">
             <thead>
               <tr className="bg-green-100 text-green-700">
                 <th className="p-3 border">University</th>
@@ -61,31 +81,19 @@ const NewZealand = () => {
               </tr>
             </thead>
             <tbody className="text-gray-700">
-              <tr>
-                <td className="p-3 border">University of Auckland</td>
-                <td className="p-3 border">Auckland</td>
-                <td className="p-3 border">81</td>
-              </tr>
-              <tr>
-                <td className="p-3 border">University of Otago</td>
-                <td className="p-3 border">Dunedin</td>
-                <td className="p-3 border">174</td>
-              </tr>
-              <tr>
-                <td className="p-3 border">Victoria University of Wellington</td>
-                <td className="p-3 border">Wellington</td>
-                <td className="p-3 border">227</td>
-              </tr>
-              <tr>
-                <td className="p-3 border">University of Canterbury</td>
-                <td className="p-3 border">Christchurch</td>
-                <td className="p-3 border">270</td>
-              </tr>
-              <tr>
-                <td className="p-3 border">Auckland University of Technology</td>
-                <td className="p-3 border">Auckland</td>
-                <td className="p-3 border">400</td>
-              </tr>
+              {[
+                ["University of Auckland", "Auckland", "81"],
+                ["University of Otago", "Dunedin", "174"],
+                ["Victoria University of Wellington", "Wellington", "227"],
+                ["University of Canterbury", "Christchurch", "270"],
+                ["Auckland University of Technology", "Auckland", "400"]
+              ].map(([name, location, rank], index) => (
+                <tr key={index}>
+                  <td className="p-3 border">{name}</td>
+                  <td className="p-3 border">{location}</td>
+                  <td className="p-3 border">{rank}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
           <p className="text-sm mt-2 text-gray-500">*Based on QS World University Rankings 2024</p>

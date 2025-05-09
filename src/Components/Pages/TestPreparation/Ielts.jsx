@@ -2,9 +2,9 @@ import React from "react";
 
 export default function IELTS() {
   return (
-    <div className="max-w-7xl mx-auto p-4 space-y-8 pt-20"> {/* Added pt-20 to add padding-top */}
+    <div className="max-w-7xl mx-auto p-4 space-y-8 pt-24 scroll-mt-24">
       <section className="text-center">
-        <h1 className="text-4xl font-bold text-blue-700 mb-2">IELTS</h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-2">IELTS</h1>
         <p className="text-gray-700 text-lg">
           The International English Language Testing System (IELTS) is an English
           proficiency test accepted for admission to universities abroad.
@@ -17,7 +17,7 @@ export default function IELTS() {
       </section>
 
       <section className="bg-gray-50 p-6 rounded-2xl shadow">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-4">Importance of IELTS</h2>
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">Importance of IELTS</h2>
         <p className="text-gray-800">
           Recognized by over 10,000 organizations globally, IELTS is widely accepted for
           academic and immigration purposes across the UK, USA, Australia, Canada,
@@ -32,7 +32,7 @@ export default function IELTS() {
 
       <section className="grid md:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded-xl shadow">
-          <h3 className="text-xl font-semibold text-blue-600 mb-2">Types of IELTS</h3>
+          <h3 className="text-xl font-semibold text-gray-700 mb-2">Types of IELTS</h3>
           <ul className="list-disc list-inside text-gray-700">
             <li>IELTS Academic</li>
             <li>IELTS General Training</li>
@@ -42,7 +42,7 @@ export default function IELTS() {
         </div>
 
         <div className="bg-white p-6 rounded-xl shadow">
-          <h3 className="text-xl font-semibold text-blue-600 mb-2">Test Formats</h3>
+          <h3 className="text-xl font-semibold text-gray-700 mb-2">Test Formats</h3>
           <p className="text-gray-700">
             Available in two formats: <strong>Computer-delivered</strong> and <strong>Paper-based</strong>. Listening
             and speaking are the same for both Academic and General, while Reading and
@@ -52,7 +52,7 @@ export default function IELTS() {
       </section>
 
       <section className="bg-gray-100 p-6 rounded-2xl shadow space-y-4">
-        <h2 className="text-2xl font-semibold text-blue-600">Registration Steps</h2>
+        <h2 className="text-2xl font-semibold text-gray-700">Registration Steps</h2>
         <div>
           <h3 className="font-semibold">Online:</h3>
           <ol className="list-decimal list-inside text-gray-800">
@@ -65,7 +65,7 @@ export default function IELTS() {
         <div>
           <h3 className="font-semibold">Offline:</h3>
           <ol className="list-decimal list-inside text-gray-800">
-            <li>Collect form from  Global Ladder</li>
+            <li>Collect form from Global Ladder</li>
             <li>Fill and submit at the office</li>
             <li>Pay via eSewa/Khalti or cash</li>
           </ol>
@@ -73,9 +73,9 @@ export default function IELTS() {
       </section>
 
       <section className="p-6 bg-white rounded-2xl shadow">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-4">IELTS Fees in Nepal</h2>
-        <table className="w-full text-left border">
-          <thead className="bg-blue-100">
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">IELTS Fees in Nepal</h2>
+        <table className="w-full text-left border text-gray-700">
+          <thead className="bg-gray-200">
             <tr>
               <th className="p-2 border">Test Type</th>
               <th className="p-2 border">Fee (NPR)</th>
@@ -103,7 +103,7 @@ export default function IELTS() {
       </section>
 
       <section className="bg-gray-50 p-6 rounded-2xl shadow">
-        <h2 className="text-2xl font-semibold text-blue-600">TOEFL vs IELTS</h2>
+        <h2 className="text-2xl font-semibold text-gray-700">TOEFL vs IELTS</h2>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
           <li>IELTS is easier for most candidates compared to TOEFL.</li>
           <li>IELTS is widely accepted in the UK, Australia, New Zealand.</li>
@@ -117,7 +117,7 @@ export default function IELTS() {
       </section>
 
       <section className="bg-white p-6 rounded-2xl shadow">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-4">Scholarships</h2>
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">Scholarships</h2>
         <p className="text-gray-800">
           Nepalese students may be eligible for IELTS-based scholarships, grants, and
           fellowships based on academic performance by select universities.

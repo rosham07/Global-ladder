@@ -29,12 +29,19 @@ const universities = [
 
 const Australia = () => {
   return (
-    <main className="pt-24 px-6 pb-16 font-sans bg-white text-gray-800">
-      <section className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6 text-blue-800 text-center">
-          Study in Australia
-        </h1>
+    <main className="pt-0 bg-gray-100 text-gray-800 font-sans">
+      {/* Hero Section */}
+      <section className="bg-gray-700 text-white py-24 text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl font-extrabold mb-4">Study in Australia</h1>
+          <p className="text-xl font-light">
+            Discover world-class education, vibrant cities, and a future full of possibilities.
+          </p>
+        </div>
+      </section>
 
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        {/* Image */}
         <div className="mb-10">
           <img
             src="./images/operahouse.jpg"
@@ -59,9 +66,9 @@ const Australia = () => {
         </div>
 
         {/* Key Facts */}
-        <div className="my-12 shadow-lg rounded-xl border overflow-hidden">
-          <div className="bg-green-100 px-6 py-4">
-            <h2 className="text-2xl font-bold text-blue-900 text-center">Key Facts to Study in Australia</h2>
+        <div className="my-12 shadow-lg rounded-xl border overflow-hidden bg-white">
+          <div className="bg-gray-200 px-6 py-4">
+            <h2 className="text-2xl font-bold text-gray-800 text-center">Key Facts to Study in Australia</h2>
           </div>
           <table className="w-full text-left text-gray-700 text-sm md:text-base">
             <tbody>
@@ -130,12 +137,12 @@ const Australia = () => {
 
         {/* Top Universities Table */}
         <section className="my-14">
-          <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
             Top Australian Universities – QS World University Rankings 2025
           </h2>
-          <div className="overflow-x-auto border rounded-lg shadow-md">
+          <div className="overflow-x-auto border rounded-lg shadow-md bg-white">
             <table className="min-w-full divide-y divide-gray-300">
-              <thead className="bg-blue-100">
+              <thead className="bg-gray-200">
                 <tr>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">QS Rank</th>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">University</th>
