@@ -1,29 +1,23 @@
-import { Routes, Route } from 'react-router-dom';
-import Sidebar from '../SideBar'; // Still correct
-
-// Corrected imports for components outside 'admin'
-import AddTestimonials from '../Pages/Testimonials/AddTestimonials';
-import ListTestimonials from '../Pages/Testimonials/ListTestimonials';
-import AddBlog from '../Pages/Blogs/AddBlogs';
-import ListBlogs from '../Pages/Blogs/ListBlogs';
+import React from 'react';
+import Sidebar from '../SideBar';
+import { Outlet } from 'react-router-dom';
 
 export default function Dashboard() {
   return (
-    <div className="flex">
-      {/* Sidebar component */}
+    <div className="flex flex-col md:flex-row min-h-screen">
       <Sidebar />
-      
-      {/* Main content area */}
-      <main className="flex-1 p-6 ml-64">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6">Admin Dashboard</h2>
 
-        {/* Routing for child components (Testimonials, Blogs, etc.) */}
-        <Routes>
-          <Route path="testimonials" element={<ListTestimonials />} />
-          <Route path="testimonials/add" element={<AddTestimonials />} />
-          <Route path="blogs" element={<ListBlogs />} />
-          <Route path="blogs/add" element={<AddBlog />} />
-        </Routes>
+      <main className="flex-1 md:ml-64 mt-16 md:mt-0"> {/* mt-16 offsets mobile hamburger button */}
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-16 px-6 shadow-lg text-center">
+          <h1 className="text-4xl font-bold">Admin Dashboard</h1>
+          <p className="text-lg mt-2 opacity-90">Manage all content from one place</p>
+        </div>
+
+        {/* Page Content */}
+        <div className="p-6">
+          <Outlet />
+        </div>
       </main>
     </div>
   );

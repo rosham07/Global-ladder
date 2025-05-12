@@ -4,141 +4,121 @@ const Ireland = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[70vh] bg-cover bg-center" style={{ backgroundImage: `url('/images/ireland-hero.jpg')` }}>
-        <div className="absolute inset-0 bg-green-900 bg-opacity-70 flex items-center justify-center">
-          <div className="text-center text-white px-4 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Study in Ireland</h1>
-            <p className="text-lg md:text-xl">
-              Discover a land of opportunity and academic excellence – your future begins in Ireland.
-            </p>
-          </div>
-        </div>
-      </section>
+<section className="relative bg-green-900 text-white py-24 text-center">
+  <img
+    src="./images/Ireland.jpg"
+    alt="Ireland Scenery"
+    className="absolute inset-0 w-full h-full object-cover opacity-40"
+  />
+  <div className="relative z-10 max-w-4xl mx-auto px-4">
+    <h1 className="text-5xl font-extrabold mb-4">Study in Ireland</h1>
+    <p className="text-xl font-light">
+      A Complete Guide for Nepali Students – Explore top universities, benefits, and how to apply.
+    </p>
+  </div>
+</section>
+
 
       {/* Main Content */}
       <section className="bg-white pt-16 pb-16 px-6 md:px-16 text-gray-800 font-sans">
         <div className="max-w-5xl mx-auto space-y-16">
-          {/* Introduction */}
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-green-700 mb-4">
-              A Complete Guide for Nepali Students
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600">
-              Learn why Ireland is a top study destination and explore everything you need to know about studying in Ireland.
-            </p>
-          </div>
 
-          {/* Key Facts */}
+          {/* Why Study in Ireland */}
           <div>
-            <h3 className="text-3xl font-semibold text-green-600 mb-4">Key Facts About Studying in Ireland</h3>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-green-700 mb-4 text-center">
+              Why Study in Ireland?
+            </h2>
             <ul className="list-disc list-inside space-y-2 text-lg">
-              <li>Over 30,000 international students choose Ireland for higher education every year.</li>
-              <li>Home to prestigious universities like Trinity College Dublin and University College Dublin.</li>
-              <li>English-speaking country with a rich cultural heritage.</li>
-              <li>Post-graduation work visa available for up to 2 years.</li>
-              <li>Access to the European job market, especially in tech and business sectors.</li>
+              <li>English-speaking country with a welcoming and safe environment.</li>
+              <li>2-year post-study work visa available for international students.</li>
+              <li>Hub for tech, pharma, finance, and business innovation in Europe.</li>
+              <li>Internationally ranked universities and industry-linked degrees.</li>
+              <li>Access to the European job market after graduation.</li>
             </ul>
           </div>
 
-          {/* Benefits for Nepali Students */}
+          {/* Top Courses in Ireland */}
           <div>
-            <h3 className="text-3xl font-semibold text-green-600 mb-4">Benefits of Studying in Ireland for Nepali Students</h3>
-            <div className="grid gap-6 md:grid-cols-2">
-              {[
-                {
-                  title: "Top-Quality Education",
-                  desc: "Earn globally recognized degrees in a wide range of disciplines from world-class institutions.",
-                },
-                {
-                  title: "Work While Studying",
-                  desc: "International students can work up to 20 hours/week during term and 40 hours during holidays.",
-                },
-                {
-                  title: "Post-Graduation Work Opportunities",
-                  desc: "Stay in Ireland for up to 2 years after graduation to work in Ireland’s thriving economy.",
-                },
-                {
-                  title: "Cultural Diversity",
-                  desc: "Experience Ireland’s rich cultural history while meeting students from all around the world.",
-                },
-              ].map((item, i) => (
-                <div key={i} className="p-6 border rounded-xl shadow-sm bg-green-50">
-                  <h4 className="font-semibold text-xl mb-2">{item.title}</h4>
-                  <p>{item.desc}</p>
-                </div>
-              ))}
-            </div>
+            <h3 className="text-3xl font-semibold text-green-600 mb-4">Top Courses in Ireland</h3>
+            <ul className="list-disc list-inside space-y-2 text-lg">
+              <li>Computer Science & IT</li>
+              <li>Business & Management</li>
+              <li>Engineering (Mechanical, Civil, Electronic)</li>
+              <li>Life Sciences & Pharmacy</li>
+              <li>Hospitality & Tourism Management</li>
+              <li>Media & Communications</li>
+            </ul>
           </div>
 
           {/* Top Universities */}
           <div>
-            <h3 className="text-3xl font-semibold text-green-600 mb-4">Top Universities in Ireland for Nepali Students</h3>
+            <h3 className="text-3xl font-semibold text-green-600 mb-4">Top Universities in Ireland</h3>
             <table className="w-full table-auto text-left border-collapse">
               <thead>
                 <tr className="bg-green-100 text-green-700">
                   <th className="p-3 border">University</th>
                   <th className="p-3 border">Location</th>
-                  <th className="p-3 border">World Ranking*</th>
+                  <th className="p-3 border">QS Ranking 2024</th>
                 </tr>
               </thead>
               <tbody className="text-gray-700">
-                <tr>
-                  <td className="p-3 border">Trinity College Dublin</td>
-                  <td className="p-3 border">Dublin</td>
-                  <td className="p-3 border">101</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border">University College Dublin</td>
-                  <td className="p-3 border">Dublin</td>
-                  <td className="p-3 border">177</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border">University of Limerick</td>
-                  <td className="p-3 border">Limerick</td>
-                  <td className="p-3 border">501</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border">Dublin City University</td>
-                  <td className="p-3 border">Dublin</td>
-                  <td className="p-3 border">601</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border">University of Galway</td>
-                  <td className="p-3 border">Galway</td>
-                  <td className="p-3 border">301</td>
-                </tr>
+                <tr><td className="p-3 border">Trinity College Dublin</td><td className="p-3 border">Dublin</td><td className="p-3 border">101</td></tr>
+                <tr><td className="p-3 border">University College Dublin</td><td className="p-3 border">Dublin</td><td className="p-3 border">177</td></tr>
+                <tr><td className="p-3 border">University of Galway</td><td className="p-3 border">Galway</td><td className="p-3 border">301</td></tr>
+                <tr><td className="p-3 border">University of Limerick</td><td className="p-3 border">Limerick</td><td className="p-3 border">501</td></tr>
+                <tr><td className="p-3 border">Dublin City University</td><td className="p-3 border">Dublin</td><td className="p-3 border">601</td></tr>
               </tbody>
             </table>
-            <p className="text-sm mt-2 text-gray-500">*Based on QS World University Rankings 2024</p>
+            <p className="text-sm mt-2 text-gray-500">*Source: QS World University Rankings 2024</p>
           </div>
 
-          {/* Requirements */}
+          {/* Application Process */}
           <div>
-            <h3 className="text-3xl font-semibold text-green-600 mb-4">Requirements to Study in Ireland for Nepali Students</h3>
-            <ul className="list-disc list-inside text-lg space-y-2">
-              <li>Academic documents (SLC, +2, Bachelor's degrees).</li>
-              <li>English proficiency (IELTS, TOEFL, etc.).</li>
-              <li>Letter of Acceptance from an Irish university.</li>
-              <li>Statement of Purpose (SOP) explaining your study goals.</li>
-              <li>Proof of financial resources to support your studies and living expenses.</li>
-              <li>Valid passport and visa application for an Irish student visa.</li>
+            <h3 className="text-3xl font-semibold text-green-600 mb-4">Application Process</h3>
+            <ol className="list-decimal list-inside space-y-2 text-lg">
+              <li>Choose your preferred course and university.</li>
+              <li>Prepare academic documents, including transcripts and certificates.</li>
+              <li>Take an English language proficiency test (IELTS/TOEFL/PTE).</li>
+              <li>Write a strong Statement of Purpose (SOP).</li>
+              <li>Apply online through the university website or centralized application portals.</li>
+              <li>Receive your Letter of Offer.</li>
+              <li>Pay tuition deposit and begin visa process.</li>
+            </ol>
+          </div>
+
+          {/* Visa Requirements */}
+          <div>
+            <h3 className="text-3xl font-semibold text-green-600 mb-4">Student Visa Requirements</h3>
+            <ul className="list-disc list-inside space-y-2 text-lg">
+              <li>Valid passport</li>
+              <li>Letter of Acceptance from an Irish university</li>
+              <li>Proof of English proficiency (IELTS/TOEFL)</li>
+              <li>Evidence of financial support (at least €7,000 per year)</li>
+              <li>Proof of tuition fee payment</li>
+              <li>Medical insurance</li>
+              <li>Visa application form and fee payment receipt</li>
             </ul>
           </div>
 
           {/* Intakes */}
           <div>
-            <h3 className="text-3xl font-semibold text-green-600 mb-4">Intakes in Ireland for Nepali Students</h3>
-            <p className="mb-4 text-lg">
-              Ireland offers two primary intakes:
-            </p>
-            <ul className="list-disc list-inside text-lg space-y-2">
-              <li>
-                <strong>Autumn Intake (September):</strong> The main intake for most programs and institutions.
-              </li>
-              <li>
-                <strong>Spring Intake (January):</strong> Available for selected programs and universities.
-              </li>
+            <h3 className="text-3xl font-semibold text-green-600 mb-4">Intakes in Ireland</h3>
+            <ul className="list-disc list-inside space-y-2 text-lg">
+              <li><strong>September Intake:</strong> Major intake with a wide range of courses.</li>
+              <li><strong>January Intake:</strong> Offered by select universities for limited programs.</li>
             </ul>
+          </div>
+
+          {/* Estimated Cost */}
+          <div>
+            <h3 className="text-3xl font-semibold text-green-600 mb-4">Estimated Cost of Studying in Ireland</h3>
+            <ul className="list-disc list-inside text-lg space-y-2">
+              <li><strong>Tuition Fee:</strong> €9,000 – €20,000 per year</li>
+              <li><strong>Living Expenses:</strong> €7,000 – €12,000 per year</li>
+              <li><strong>Health Insurance:</strong> Around €500/year</li>
+              <li><strong>Visa Application Fee:</strong> €60 (short stay) or €100 (long stay)</li>
+            </ul>
+            <p className="text-sm mt-2 text-gray-500">*Costs may vary by institution and city.</p>
           </div>
         </div>
       </section>

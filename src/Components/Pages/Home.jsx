@@ -94,22 +94,19 @@ const Home = () => {
               </div>
             ))}
           </div>
+          
         </div>
+         <div className="mt-20">
+          <h2 className="text-4xl font-bold">Ready to Study Abroad?</h2>
+          <p className="mt-4 text-xl">
+            Let Global Ladder guide your journey with confidence and care.
+          </p>
+        </div>
+        
       </section>
-
-      {/* Footer Section */}
-      <section className="py-20 bg-gray-800 text-white text-center">
-        <h2 className="text-4xl font-bold">Ready to Study Abroad?</h2>
-        <p className="mt-4 text-xl">
-          Let Global Ladder guide your journey with confidence and care.
-        </p>
-        <Link to="/contact">
-          <button className="mt-8 px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-500 hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 text-lg shadow">
-            Book a Free Session
-          </button>
-        </Link>
-      </section>
-    </main>
+   
+      
+  </main>
   );
 };
 

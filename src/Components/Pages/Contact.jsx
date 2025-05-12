@@ -68,9 +68,9 @@ const Contact = () => {
               We're here to answer your questions and help you take the next step in your international education journey.
             </p>
             <ul className="space-y-4 text-gray-800 text-lg">
-              <li><strong>📍 Address:</strong> New Baneshwor, Kathmandu, Nepal</li>
-              <li><strong>📞 Phone:</strong> +977-9840934933</li>
-              <li><strong>📧 Email:</strong> info@globalladder.edu.np</li>
+              <li><strong>📍 Address:</strong> Old Baneshwor, Kathmandu, Nepal</li>
+              <li><strong>📞 Phone:</strong> +977 970-0616287</li>
+              <li><strong>📧 Email:</strong> globalladdereducation@gmail.com</li>
               <li><strong>🕒 Hours:</strong> Sunday – Friday: 10:00 AM – 6:00 PM</li>
             </ul>
           </div>

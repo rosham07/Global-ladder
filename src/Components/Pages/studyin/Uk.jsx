@@ -4,8 +4,13 @@ const Uk = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gray-700 text-white py-24 text-center">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative bg-gray-700 text-white py-24 text-center">
+        <img
+          src="./images/UK.jpg"
+          alt="UK Scenery"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h1 className="text-5xl font-extrabold mb-4">Study in the UK</h1>
           <p className="text-xl font-light">
             Build your global future with world-class UK education and expert guidance from Global Ladder
@@ -40,7 +45,9 @@ const Uk = () => {
 
           {/* Benefits for Nepali Students */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">Benefits of Studying in the UK for Nepali Students</h2>
+            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+              Benefits of Studying in the UK for Nepali Students
+            </h2>
             <div className="grid gap-6 md:grid-cols-2">
               {[
                 {
@@ -70,7 +77,9 @@ const Uk = () => {
 
           {/* Top Universities */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">Top Universities in the UK for Nepali Students</h2>
+            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+              Top Universities in the UK for Nepali Students
+            </h2>
             <table className="w-full table-auto text-left border-collapse bg-white rounded-md overflow-hidden shadow">
               <thead>
                 <tr className="bg-gray-200 text-gray-800">
@@ -95,12 +104,16 @@ const Uk = () => {
                 ))}
               </tbody>
             </table>
-            <p className="text-sm mt-2 text-gray-500">*Based on QS World University Rankings 2024</p>
+            <p className="text-sm mt-2 text-gray-500">
+              *Based on QS World University Rankings 2024
+            </p>
           </div>
 
           {/* Requirements */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">Requirements to Study in the UK for Nepali Students</h2>
+            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+              Requirements to Study in the UK for Nepali Students
+            </h2>
             <ul className="list-disc list-inside text-lg space-y-2 text-gray-700">
               <li>Academic transcripts and certificates (SLC, +2, Bachelors).</li>
               <li>Proof of English proficiency (IELTS, PTE, TOEFL, etc.).</li>
@@ -113,7 +126,9 @@ const Uk = () => {
 
           {/* Intakes */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">Intakes in the UK for Nepali Students</h2>
+            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+              Intakes in the UK for Nepali Students
+            </h2>
             <p className="mb-4 text-lg text-gray-700">
               UK universities generally have three main intakes per year:
             </p>

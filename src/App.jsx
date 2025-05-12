@@ -30,11 +30,16 @@ import MainLayout from './Components/MainLayout'; // Import the MainLayout compo
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './Components/admin/Dashboard.jsx';
 // Testimonials
-import AddTestimonials from './Components/Pages/Testimonials/AddTestimonials.jsx';
-import ListTestimonials from './Components/Pages/Testimonials/ListTestimonials.jsx';
+import Testimonials from './Components/Pages/Testimonials.jsx';
+
 // Blogs
-import AddBlog from './Components/Pages/Blogs/AddBlogs.jsx';
-import ListBlogs from './Components/Pages/Blogs/ListBlogs.jsx';
+import Blogs from './Components/Pages/Blogs.jsx';
+
+// Admin
+import AddTestimonials from './Components/admin/Testimonials/AddTestimonials.jsx';
+import ListTestimonials from './Components/admin/Testimonials/ListTestimonials.jsx';
+import AddBlogs from './Components/admin/Blogs/Addblogs.jsx';
+import ListBlogs from './Components/admin/Blogs/ListBlogs.jsx';
 
 function App() {
   return (
@@ -57,20 +62,26 @@ function App() {
 
           {/* Test Preparation */}
           <Route path="testpreparation/ielts" element={<Ielts />} />
-          <Route path='testpreparation/pte' element={<Pte />} />
-          <Route path='testpreparation/toefl' element={<Toefl />} />
-          <Route path='testpreparation/sat' element={<Sat />} />
-          <Route path='testpreparation/gre' element={<Gre />} />
-    
+          <Route path="testpreparation/pte" element={<Pte />} />
+          <Route path="testpreparation/toefl" element={<Toefl />} />
+          <Route path="testpreparation/sat" element={<Sat />} />
+          <Route path="testpreparation/gre" element={<Gre />} />
+
+          {/*Testimonials */}
+          <Route path="testimonials" element={<Testimonials />} />
+          {/* Blogs */}
+          <Route path="blog" element={<Blogs />} />
         </Route>
 
         {/* Admin/Dashboard routes */}
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="testimonials" element={<ListTestimonials />} />
+          {/* Nested Routes */}
           <Route path="testimonials/add" element={<AddTestimonials />} />
-          <Route path="blogs" element={<ListBlogs />} />
-          <Route path="blogs/add" element={<AddBlog />} />
+          <Route path="testimonials/list" element={<ListTestimonials />} />
+          <Route path="blogs/add" element={<AddBlogs />} />
+          <Route path="blogs/list" element={<ListBlogs />} />
+          {/* Other Dashboard routes can go here, like blog-related pages */}
         </Route>
       </Routes>
     </HashRouter>

@@ -1,35 +1,86 @@
-import { NavLink } from 'react-router-dom'; // Import NavLink for active link styling
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 export default function Sidebar() {
-  return (
-    <div className="w-64 bg-gray-800 text-white fixed min-h-screen p-6">
-      {/* Admin Panel Header */}
-      <h2 className="text-xl font-bold mb-6">Admin Panel</h2>
-      
-      {/* Sidebar Navigation */}
-      <nav className="flex flex-col gap-4">
-        <span className="text-gray-400 font-semibold mb-2">Manage Content</span>
-        
-        {/* Testimonials Link */}
-        <NavLink 
-          to="/dashboard/testimonials" 
-          className="hover:text-blue-400 py-2 px-3 rounded-lg transition duration-200"
-          activeClassName="bg-blue-600"  // Active state styling
-        >
-          Testimonials
-        </NavLink>
-        
-        {/* Blogs Link */}
-        <NavLink 
-          to="/dashboard/blogs" 
-          className="hover:text-blue-400 py-2 px-3 rounded-lg transition duration-200"
-          activeClassName="bg-blue-600"  // Active state styling
-        >
-          Blogs
-        </NavLink>
+  const [isOpen, setIsOpen] = useState(false);
 
-        {/* Add additional links here */}
-      </nav>
+  const toggleSidebar = () => setIsOpen(!isOpen);
+
+  return (
+    <div className="relative z-50">
+      {/* Hamburger Button for Mobile */}
+      <button
+  className="p-4 text-white bg-gray-800 fixed top-0 left-0 z-50"
+  onClick={toggleSidebar}
+>
+  {isOpen ? <X size={24} /> : <Menu size={24} />}
+</button>
+      {/* Sidebar */}
+      <div
+  className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white pt-20 p-6 transition-transform transform duration-300 z-40 ${
+    isOpen ? 'translate-x-0' : '-translate-x-full'
+  }`}
+>
+
+
+
+        {/* Admin Panel Header */}
+        <h2 className="text-xl font-bold mb-6 mt-10 md:mt-0">Admin Panel</h2>
+
+        {/* Sidebar Navigation */}
+        <nav className="flex flex-col gap-4">
+          <span className="text-gray-400 font-semibold mb-2">Manage Content</span>
+
+          <NavLink
+            to="/dashboard/testimonials/add"
+            className={({ isActive }) =>
+              `py-2 px-3 rounded-lg transition duration-200 ${
+                isActive ? 'bg-blue-600 text-white' : 'hover:text-blue-400'
+              }`
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Add Testimonial
+          </NavLink>
+
+          <NavLink
+            to="/dashboard/testimonials/list"
+            className={({ isActive }) =>
+              `py-2 px-3 rounded-lg transition duration-200 ${
+                isActive ? 'bg-blue-600 text-white' : 'hover:text-blue-400'
+              }`
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            List Testimonials
+          </NavLink>
+
+          <NavLink
+            to="/dashboard/blogs/add"
+            className={({ isActive }) =>
+              `py-2 px-3 rounded-lg transition duration-200 ${
+                isActive ? 'bg-blue-600 text-white' : 'hover:text-blue-400'
+              }`
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Add Blog
+          </NavLink>
+
+          <NavLink
+            to="/dashboard/blogs/list"
+            className={({ isActive }) =>
+              `py-2 px-3 rounded-lg transition duration-200 ${
+                isActive ? 'bg-blue-600 text-white' : 'hover:text-blue-400'
+              }`
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            List Blogs
+          </NavLink>
+        </nav>
+      </div>
     </div>
   );
 }
