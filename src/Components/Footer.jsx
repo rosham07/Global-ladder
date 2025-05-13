@@ -1,3 +1,5 @@
+import { FaFacebook, FaYoutube, FaGoogle, FaInstagram } from 'react-icons/fa';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white mt-20">
@@ -10,10 +12,18 @@ export default function Footer() {
             It is led by young and experienced professionals.
           </p>
           <div className="flex items-center space-x-4 text-xl text-gray-300">
-            <a href="#" aria-label="Facebook" className="hover:text-white">📘</a>
-            <a href="#" aria-label="YouTube" className="hover:text-white">📺</a>
-            <a href="#" aria-label="Google" className="hover:text-white">🌐</a>
-            <a href="#" aria-label="Instagram" className="hover:text-white">📷</a>
+            <a href="#" aria-label="Facebook" className="hover:text-white">
+              <FaFacebook />
+            </a>
+            <a href="#" aria-label="YouTube" className="hover:text-white">
+              <FaYoutube />
+            </a>
+            <a href="#" aria-label="Google" className="hover:text-white">
+              <FaGoogle />
+            </a>
+            <a href="#" aria-label="Instagram" className="hover:text-white">
+              <FaInstagram />
+            </a>
           </div>
         </div>
 
