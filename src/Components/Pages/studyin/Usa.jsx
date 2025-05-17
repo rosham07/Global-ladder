@@ -90,11 +90,11 @@ const Usa = () => {
               </thead>
               <tbody className="text-gray-700">
                 {[
-                  ["Harvard University", "Cambridge, MA", "3"],
-                  ["Stanford University", "Stanford, CA", "2"],
+                  ["Harvard University", "Cambridge, MA", "4"],
+                  ["Stanford University", "Stanford, CA", "6"],
                   ["MIT", "Cambridge, MA", "1"],
-                  ["Caltech", "Pasadena, CA", "6"],
-                  ["UC Berkeley", "Berkeley, CA", "32"],
+                  ["Caltech", "Pasadena, CA", "10"],
+                  ["UC Berkeley", "Berkeley, CA", "12"],
                 ].map(([name, location, rank], i) => (
                   <tr key={i}>
                     <td className="p-3 border">{name}</td>

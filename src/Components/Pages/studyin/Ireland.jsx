@@ -62,11 +62,11 @@ const Ireland = () => {
                 </tr>
               </thead>
               <tbody className="text-gray-700">
-                <tr><td className="p-3 border">Trinity College Dublin</td><td className="p-3 border">Dublin</td><td className="p-3 border">101</td></tr>
-                <tr><td className="p-3 border">University College Dublin</td><td className="p-3 border">Dublin</td><td className="p-3 border">177</td></tr>
-                <tr><td className="p-3 border">University of Galway</td><td className="p-3 border">Galway</td><td className="p-3 border">301</td></tr>
-                <tr><td className="p-3 border">University of Limerick</td><td className="p-3 border">Limerick</td><td className="p-3 border">501</td></tr>
-                <tr><td className="p-3 border">Dublin City University</td><td className="p-3 border">Dublin</td><td className="p-3 border">601</td></tr>
+                <tr><td className="p-3 border">Trinity College Dublin</td><td className="p-3 border">Dublin</td><td className="p-3 border">87</td></tr>
+                <tr><td className="p-3 border">University College Dublin</td><td className="p-3 border">Dublin</td><td className="p-3 border">126</td></tr>
+                <tr><td className="p-3 border">University of Galway</td><td className="p-3 border">Galway</td><td className="p-3 border">273</td></tr>
+                <tr><td className="p-3 border">University of Limerick</td><td className="p-3 border">Limerick</td><td className="p-3 border">421</td></tr>
+                <tr><td className="p-3 border">Dublin City University</td><td className="p-3 border">Dublin</td><td className="p-3 border">421</td></tr>
               </tbody>
             </table>
             <p className="text-sm mt-2 text-gray-500">*Source: QS World University Rankings 2024</p>

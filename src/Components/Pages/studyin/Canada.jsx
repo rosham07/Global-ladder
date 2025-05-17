@@ -32,16 +32,64 @@ const Canada = () => {
           </div>
 
           {/* Key Facts */}
-          <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">Key Facts About Studying in Canada</h2>
-            <ul className="list-disc list-inside space-y-2 text-lg text-gray-700">
-              <li>Canada has over 100 public and private universities.</li>
-              <li>Two official languages: English and French.</li>
-              <li>Post-graduation work permit up to 3 years.</li>
-              <li>High quality of life and safe environment.</li>
-              <li>International student-friendly immigration pathways.</li>
-            </ul>
-          </div>
+          <div className="max-w-2xl mx-auto my-10 bg-white rounded-xl shadow-lg overflow-hidden">
+      <h2 className="text-xl md:text-2xl font-semibold text-center text-blue-900 bg-blue-100 py-4">
+        Key Facts to Study in Canada
+      </h2>
+      <table className="w-full text-left text-gray-800">
+        <tbody>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium w-1/3 bg-gray-50">Language Spoken</td>
+            <td className="px-4 py-3">English, French</td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Cost of Study</td>
+            <td className="px-4 py-3">
+              Undergraduate – CAD 15,000 to CAD 35,000<br />
+              Post-graduate – CAD 10,000 to CAD 50,000
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Source of Funding</td>
+            <td className="px-4 py-3">
+              Scholarships, grants, personal savings, part-time jobs, loans, and financial aid programs
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Exams Required</td>
+            <td className="px-4 py-3">
+              <a href="https://www.ielts.org/" target="_blank" rel="noopener noreferrer" className="text-purple-600 underline">IELTS</a>,{' '}
+              <a href="https://www.ets.org/toefl" target="_blank" rel="noopener noreferrer" className="text-purple-600 underline">TOEFL</a> and/or French Language Proficiency Test
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Degrees</td>
+            <td className="px-4 py-3">
+              Wide range of degrees, including Bachelor&apos;s, Master&apos;s, and Doctoral degree programmes
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Intake</td>
+            <td className="px-4 py-3">
+              Fall (September) and Winter (January)
+            </td>
+          </tr>
+          <tr className="border-t border-b">
+            <td className="px-4 py-3 font-medium bg-gray-50">Visa Requirements</td>
+            <td className="px-4 py-3">
+              <a
+                href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-600 hover:text-purple-800 underline"
+              >
+                Student Visa for Canada
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
           {/* Benefits for Nepali Students */}
           <div>
@@ -90,11 +138,11 @@ const Canada = () => {
               </thead>
               <tbody className="text-gray-700">
                 {[
-                  ["University of Toronto", "Toronto, Ontario", "21"],
-                  ["University of British Columbia", "Vancouver, BC", "34"],
-                  ["McGill University", "Montreal, Quebec", "30"],
-                  ["University of Alberta", "Edmonton, Alberta", "111"],
-                  ["McMaster University", "Hamilton, Ontario", "189"],
+                  ["University of Toronto", "Toronto, Ontario", "25"],
+                  ["University of British Columbia", "Vancouver, BC", "38"],
+                  ["McGill University", "Montreal, Quebec", "29"],
+                  ["University of Alberta", "Edmonton, Alberta", "96"],
+                  ["McMaster University", "Hamilton, Ontario", "176"],
                 ].map(([name, location, rank], i) => (
                   <tr key={i}>
                     <td className="p-3 border">{name}</td>

@@ -1,5 +1,8 @@
+// src/App.jsx
 import './App.css';
 import AdminLogin from './Components/admin/AdminLogin.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Components
 import ScrollToTop from './Components/ScrollToTop.jsx';
@@ -9,7 +12,7 @@ import Home from './Components/Pages/Home.jsx';
 import AboutUs from './Components/Pages/AboutUs.jsx';
 import Contact from './Components/Pages/Contact.jsx';
 
-// Pages - Study In
+// Study In
 import Australia from './Components/Pages/studyin/Australia.jsx';
 import Uk from './Components/Pages/studyin/Uk.jsx';
 import Canada from './Components/Pages/studyin/Canada.jsx';
@@ -25,28 +28,39 @@ import Sat from './Components/Pages/TestPreparation/Sat.jsx';
 import Gre from './Components/Pages/TestPreparation/Gre.jsx';
 
 // Main Layout
-import MainLayout from './Components/MainLayout'; // Import the MainLayout component
+import MainLayout from './Components/MainLayout';
 
+// Routing
 import { HashRouter, Routes, Route } from 'react-router-dom';
+
+// Admin Dashboard
 import Dashboard from './Components/admin/Dashboard.jsx';
-// Testimonials
-import Testimonials from './Components/Pages/Testimonials.jsx';
-
-// Blogs
-import Blogs from './Components/Pages/Blogs.jsx';
-
-// Admin
 import AddTestimonials from './Components/admin/Testimonials/AddTestimonials.jsx';
 import ListTestimonials from './Components/admin/Testimonials/ListTestimonials.jsx';
 import AddBlogs from './Components/admin/Blogs/Addblogs.jsx';
 import ListBlogs from './Components/admin/Blogs/ListBlogs.jsx';
 
+// Public Pages
+import Testimonials from './Components/Pages/Testimonials.jsx';
+import Blogs from './Components/Pages/Blogs.jsx';
+import BlogDetail from './Components/Pages/BlogDetail.jsx';
+
 function App() {
   return (
     <HashRouter>
+      {/* Toast container must be in the tree for toasts to render */}
+      <ToastContainer 
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+      />
+
       <ScrollToTop />
       <Routes>
-        {/* Public Pages wrapped with MainLayout */}
+        {/* Public pages wrapped with MainLayout */}
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<AboutUs />} />
@@ -67,21 +81,19 @@ function App() {
           <Route path="testpreparation/sat" element={<Sat />} />
           <Route path="testpreparation/gre" element={<Gre />} />
 
-          {/*Testimonials */}
+          {/* Testimonials & Blogs */}
           <Route path="testimonials" element={<Testimonials />} />
-          {/* Blogs */}
           <Route path="blog" element={<Blogs />} />
+          <Route path="blog/:id" element={<BlogDetail />} />
         </Route>
 
-        {/* Admin/Dashboard routes */}
+        {/* Admin/Dashboard */}
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/dashboard" element={<Dashboard />}>
-          {/* Nested Routes */}
           <Route path="testimonials/add" element={<AddTestimonials />} />
           <Route path="testimonials/list" element={<ListTestimonials />} />
           <Route path="blogs/add" element={<AddBlogs />} />
           <Route path="blogs/list" element={<ListBlogs />} />
-          {/* Other Dashboard routes can go here, like blog-related pages */}
         </Route>
       </Routes>
     </HashRouter>

@@ -8,27 +8,23 @@ export default function Sidebar() {
   const toggleSidebar = () => setIsOpen(!isOpen);
 
   return (
-    <div className="relative z-50">
-      {/* Hamburger Button for Mobile */}
+    <>
+      {/* Hamburger Button (Mobile only) */}
       <button
-  className="p-4 text-white bg-gray-800 fixed top-0 left-0 z-50"
-  onClick={toggleSidebar}
->
-  {isOpen ? <X size={24} /> : <Menu size={24} />}
-</button>
+        className="p-4 text-white bg-gray-800 fixed top-0 left-0 z-50 md:hidden"
+        onClick={toggleSidebar}
+      >
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
       {/* Sidebar */}
       <div
-  className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white pt-20 p-6 transition-transform transform duration-300 z-40 ${
-    isOpen ? 'translate-x-0' : '-translate-x-full'
-  }`}
->
-
-
-
-        {/* Admin Panel Header */}
+        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white pt-20 p-6 transition-transform transform duration-300 z-40 
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
+        md:translate-x-0`}
+      >
         <h2 className="text-xl font-bold mb-6 mt-10 md:mt-0">Admin Panel</h2>
 
-        {/* Sidebar Navigation */}
         <nav className="flex flex-col gap-4">
           <span className="text-gray-400 font-semibold mb-2">Manage Content</span>
 
@@ -81,6 +77,6 @@ export default function Sidebar() {
           </NavLink>
         </nav>
       </div>
-    </div>
+    </>
   );
 }

@@ -19,15 +19,23 @@ export default function Ielts() {
     },
   ];
 
+  const testData = [
+    { type: 'IELTS on Paper (Academic/General)', fee: 31500, administeredBy: 'British Council' },
+    { type: 'IELTS on Computer (Academic/General)', fee: 28800, administeredBy: 'British Council' },
+    { type: 'IELTS for UKVI on Paper', fee: 34000, administeredBy: 'British Council' },
+    { type: 'IELTS for UKVI on Computer', fee: 28800, administeredBy: 'British Council' },
+    { type: 'IELTS Life Skills (A1 & B1)', fee: 24000, administeredBy: 'British Council' },
+    { type: 'IELTS on Paper (Academic/General)', fee: 31500, administeredBy: 'IDP Nepal' },
+    { type: 'IELTS on Computer (Academic/General)', fee: 28800, administeredBy: 'IDP Nepal' },
+    { type: 'IELTS for UKVI on Paper', fee: 34000, administeredBy: 'IDP Nepal' },
+    { type: 'IELTS for UKVI on Computer', fee: 28800, administeredBy: 'IDP Nepal' },
+    { type: 'IELTS Life Skills (A1 & B1)', fee: 24000, administeredBy: 'IDP Nepal' },
+  ];
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-32 px-4 text-center overflow-hidden">
-        <img
-          src="/images/ielts-banner.jpg"
-          alt="IELTS Exam"
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
-        />
+      <section className="bg-gradient-to-br from-gray-600 to-gray-700 text-white py-24 px-4 text-center relative">
         <div className="relative z-10 max-w-3xl mx-auto">
           <h1 className="text-5xl font-bold tracking-tight mb-4">IELTS</h1>
           <p className="text-lg text-gray-300">
@@ -44,11 +52,6 @@ export default function Ielts() {
           <p className="text-gray-700 leading-relaxed">
             Recognized by over 10,000 organizations globally, IELTS is widely accepted for academic and immigration purposes across 140+ countries including the UK, USA, Australia, Canada, and more.
           </p>
-          <img
-            src="/images/ielts-world-map.jpg"
-            alt="IELTS Acceptance"
-            className="rounded-xl mt-6 shadow-md"
-          />
         </section>
 
         {/* Types and Formats */}
@@ -92,25 +95,29 @@ export default function Ielts() {
           </div>
         </section>
 
-        {/* Fees */}
+        {/* IELTS Fees */}
         <section className="bg-white p-8 rounded-2xl shadow-sm">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">IELTS Fees in Nepal</h2>
-          <table className="w-full text-left border-collapse text-sm text-gray-700">
-            <thead className="bg-gray-200 text-gray-800">
-              <tr>
-                <th className="px-4 py-2 border-b">Test Type</th>
-                <th className="px-4 py-2 border-b">Fee (NPR)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[["IELTS Paper-Based", "31,500"], ["IELTS Computer-Delivered", "28,800"], ["UKVI", "34,000"], ["Life Skills", "24,000"]].map(([type, fee], idx) => (
-                <tr key={idx} className="hover:bg-gray-50">
-                  <td className="px-4 py-2 border-b">{type}</td>
-                  <td className="px-4 py-2 border-b">{fee}</td>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-black text-white">
+              <thead className="bg-gray-800">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Test Type</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Fee (NPR)</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Administered by</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="bg-black divide-y divide-gray-700">
+                {testData.map((item, index) => (
+                  <tr key={index} className={index % 2 === 0 ? '' : 'bg-gray-900'}>
+                    <td className="px-6 py-4 whitespace-nowrap">{item.type}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{item.fee.toLocaleString('en-NP')}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{item.administeredBy}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         {/* TOEFL vs IELTS */}
@@ -121,11 +128,6 @@ export default function Ielts() {
             <li>Preferred in UK, Australia, and New Zealand.</li>
             <li>TOEFL is more popular in the US and parts of Canada.</li>
           </ul>
-          <img
-            src="/images/toefl-vs-ielts.jpg"
-            alt="TOEFL vs IELTS"
-            className="rounded-xl mt-6 shadow-md"
-          />
         </section>
 
         {/* Scholarships */}

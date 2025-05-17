@@ -30,16 +30,50 @@ const NewZealand = () => {
         </div>
 
         {/* Key Facts */}
-        <div>
-          <h2 className="text-3xl font-semibold text-green-600 mb-4">Key Facts About Studying in New Zealand</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>Over 30,000 international students from around the world choose New Zealand every year.</li>
-            <li>Globally recognized degrees from top-ranked universities.</li>
-            <li>Safe and welcoming environment with a high quality of life.</li>
-            <li>Post-graduation work visa options to gain work experience in New Zealand.</li>
-            <li>English-speaking country with a diverse culture and beautiful landscapes.</li>
-          </ul>
-        </div>
+         <div className="max-w-2xl mx-auto my-10 bg-white rounded-xl shadow-lg overflow-hidden">
+      <h2 className="text-xl md:text-2xl font-semibold text-center text-green-900 bg-green-100 py-4">
+        Key Facts to Study in New Zealand
+      </h2>
+      <table className="w-full text-left text-gray-800">
+        <tbody>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium w-1/3 bg-gray-50">Language Spoken</td>
+            <td className="px-4 py-3">English (official language)</td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Cost of Study</td>
+            <td className="px-4 py-3">
+              Undergraduate: NZD 20,000 - NZD 40,000 per year<br />
+              Postgraduate: NZD 25,000 - NZD 50,000 per year
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Source of Funding</td>
+            <td className="px-4 py-3">
+              Scholarships, Personal savings, Education Loans, Sponsorship from government or private entities
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Exams Required</td>
+            <td className="px-4 py-3">IELTS, TOEFL</td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Degrees</td>
+            <td className="px-4 py-3">Bachelor's Degree, Master's Degree, Doctoral Degree</td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Intake</td>
+            <td className="px-4 py-3">
+              Semester 1: February/March, Semester 2: July, Summer Intake: November/December
+            </td>
+          </tr>
+          <tr className="border-t border-b">
+            <td className="px-4 py-3 font-medium bg-gray-50">Visa Requirements</td>
+            <td className="px-4 py-3">Valid Passport with a minimum validity of 3 months beyond the intended stay</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
         {/* Benefits for Nepali Students */}
         <div>
@@ -84,11 +118,11 @@ const NewZealand = () => {
             </thead>
             <tbody className="text-gray-700">
               {[
-                ["University of Auckland", "Auckland", "81"],
-                ["University of Otago", "Dunedin", "174"],
-                ["Victoria University of Wellington", "Wellington", "227"],
-                ["University of Canterbury", "Christchurch", "270"],
-                ["Auckland University of Technology", "Auckland", "400"]
+                ["University of Auckland", "Auckland", "65"],
+                ["University of Otago", "Dunedin", "214"],
+                ["Victoria University of Wellington", "Wellington", "244"],
+                ["University of Canterbury", "Christchurch", "261"],
+                ["Auckland University of Technology", "Auckland", "407"]
               ].map(([name, location, rank], index) => (
                 <tr key={index}>
                   <td className="p-3 border">{name}</td>

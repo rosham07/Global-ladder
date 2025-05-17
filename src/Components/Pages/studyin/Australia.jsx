@@ -3,26 +3,24 @@ import React from 'react';
 const Australia = () => {
   return (
     <main className="pt-0 bg-gray-100 text-gray-800 font-sans">
-     {/* Hero Section */}
-<section className="relative bg-gray-700 text-white py-24 text-center">
-  <img
-    src="./images/australia.jpg"
-    alt="Australia Scenery"
-    className="absolute inset-0 w-full h-full object-cover opacity-40"
-  />
-  <div className="relative z-10 max-w-4xl mx-auto px-4">
-    <h1 className="text-5xl font-extrabold mb-4">Study in Australia</h1>
-    <p className="text-xl font-light">
-      Discover world-class education, vibrant cities, and a future full of possibilities.
-    </p>
-  </div>
-</section>
-
+      {/* Hero Section */}
+      <section className="relative bg-gray-700 text-white py-24 text-center">
+        <img
+          src="./images/australia.jpg"
+          alt="Australia Scenery"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl font-extrabold mb-4">Study in Australia</h1>
+          <p className="text-xl font-light">
+            Discover world-class education, vibrant cities, and a future full of possibilities.
+          </p>
+        </div>
+      </section>
 
       {/* Main Content */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        {/* Image Section */}
-        
+
         {/* Title Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
@@ -35,14 +33,55 @@ const Australia = () => {
 
         {/* Key Facts */}
         <div className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-700 mb-4">Key Facts About Studying in Australia</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg text-gray-700">
-            <li>English is the primary language used in education and daily life.</li>
-            <li>Work up to 48 hours per fortnight during study and full-time during holidays.</li>
-            <li>Access post-study work visas after graduation.</li>
-            <li>Quality assurance through TEQSA and CRICOS registration.</li>
-            <li>Healthcare coverage under OSHC during study duration.</li>
-          </ul>
+          <h2 className="text-3xl font-semibold text-gray-700 mb-6 text-center">Key Facts to Study in Australia</h2>
+          <div className="border rounded-lg overflow-hidden shadow bg-white">
+            <table className="w-full text-sm md:text-base text-left text-gray-700">
+              <tbody>
+                <tr className="border-t">
+                  <td className="px-6 py-4 font-medium w-1/3 bg-gray-50">Language spoken</td>
+                  <td className="px-6 py-4">English</td>
+                </tr>
+                <tr className="border-t">
+                  <td className="px-6 py-4 font-medium bg-gray-50">Cost of study</td>
+                  <td className="px-6 py-4">
+                    Undergraduate – AUD 20,000 to AUD 45,000 per year,<br />
+                    Post-graduate – AUD 22,000 to AUD 50,000 per year.
+                  </td>
+                </tr>
+                <tr className="border-t">
+                  <td className="px-6 py-4 font-medium bg-gray-50">Source of funding</td>
+                  <td className="px-6 py-4">
+                    Scholarships, personal savings, part-time work, educational loans, and sponsorships
+                  </td>
+                </tr>
+                <tr className="border-t">
+                  <td className="px-6 py-4 font-medium bg-gray-50">Exams required</td>
+                  <td className="px-6 py-4">IELTS, TOEFL, or PTE Academic</td>
+                </tr>
+                <tr className="border-t">
+                  <td className="px-6 py-4 font-medium bg-gray-50">Degrees</td>
+                  <td className="px-6 py-4">Undergraduate, post-graduate, Doctoral, vocational courses.</td>
+                </tr>
+                <tr className="border-t">
+                  <td className="px-6 py-4 font-medium bg-gray-50">Intakes</td>
+                  <td className="px-6 py-4">February/March and July/August.</td>
+                </tr>
+                <tr className="border-t border-b">
+                  <td className="px-6 py-4 font-medium bg-gray-50">Visa</td>
+                  <td className="px-6 py-4">
+                    <a
+                      href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800"
+                    >
+                      Student visa subclass 500
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Benefits Section */}
@@ -88,10 +127,10 @@ const Australia = () => {
             </thead>
             <tbody className="text-gray-700">
               {[
-                ['University of Melbourne', 'Melbourne, Victoria', '19'],
-                ['University of Sydney', 'Sydney, New South Wales', '22'],
-                ['University of New South Wales (UNSW)', 'Sydney, New South Wales', '34'],
-                ['Australian National University', 'Canberra, ACT', '37'],
+                ['University of Melbourne', 'Melbourne, Victoria', '13'],
+                ['University of Sydney', 'Sydney, New South Wales', '18'],
+                ['University of New South Wales (UNSW)', 'Sydney, New South Wales', '19'],
+                ['Australian National University', 'Canberra, ACT', '30'],
               ].map(([name, location, rank], i) => (
                 <tr key={i}>
                   <td className="p-3 border">{name}</td>
@@ -137,3 +176,4 @@ const Australia = () => {
 };
 
 export default Australia;
+  

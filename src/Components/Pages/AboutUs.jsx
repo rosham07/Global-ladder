@@ -43,7 +43,7 @@ const AboutUs = () => {
               support like accommodation and orientation — we cover it all.
             </p>
             <p className="mt-6 text-blue-600 font-semibold italic text-lg">
-              Our motto: "Climb Higher, Go Further"
+              Our motto: "Climbing Towards Excellence, Together"
             </p>
           </div>
         </div>
@@ -129,7 +129,7 @@ const AboutUs = () => {
           {/* Text */}
           <div className="text-left">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Nischal Devkota</h2>
-            <p className="text-blue-600 font-medium text-lg mb-2">Chief Executive Officer (CEO)</p>
+            <p className="text-blue-600 font-medium text-lg mb-2">Founder/Chief Executive Officer (CEO)</p>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
               Nischal Devkota is the visionary force behind Global Ladder. His unwavering belief in the power of global education 
               drives the company’s mission to empower students from all backgrounds. Under his leadership, Global Ladder has become 

@@ -32,16 +32,61 @@ const Uk = () => {
           </div>
 
           {/* Key Facts */}
-          <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">Key Facts About Studying in the UK</h2>
-            <ul className="list-disc list-inside space-y-2 text-lg text-gray-700">
-              <li>Over 395 universities and colleges across the UK.</li>
-              <li>Globally recognized degrees and research opportunities.</li>
-              <li>Two-year post-study work visa for international graduates.</li>
-              <li>Access to world-class libraries, labs, and academic facilities.</li>
-              <li>High-quality healthcare access via NHS (with surcharge).</li>
-            </ul>
-          </div>
+          <div className="max-w-2xl mx-auto my-10 bg-white rounded-xl shadow-lg overflow-hidden">
+      <h2 className="text-xl md:text-2xl font-semibold text-center text-blue-900 bg-blue-100 py-4">
+        Key Facts to Study in UK
+      </h2>
+      <table className="w-full text-left text-gray-800">
+        <tbody>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium w-1/3 bg-gray-50">Language spoken</td>
+            <td className="px-4 py-3">English</td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Cost of study</td>
+            <td className="px-4 py-3">
+              Undergraduate – £10,000 to £38,000 per year<br />
+              Postgraduate programs – £11,000 to £45,000 per year.
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Source of funding</td>
+            <td className="px-4 py-3">
+              Scholarships, grants, personal savings, part-time jobs, and student loans.
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Exams required</td>
+            <td className="px-4 py-3">
+              A-levels, for postgraduate studies, a bachelor’s degree or its equivalent
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Degrees</td>
+            <td className="px-4 py-3">
+              Bachelors, Masters, Doctoral, Vocational courses.
+            </td>
+          </tr>
+          <tr className="border-t">
+            <td className="px-4 py-3 font-medium bg-gray-50">Intakes</td>
+            <td className="px-4 py-3">September/October</td>
+          </tr>
+          <tr className="border-t border-b">
+            <td className="px-4 py-3 font-medium bg-gray-50">Visa</td>
+            <td className="px-4 py-3">
+              <a
+                href="https://www.gov.uk/tier-4-general-visa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-600 hover:text-purple-800 underline"
+              >
+                Tier 4 (General) Student Visa
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
           {/* Benefits for Nepali Students */}
           <div>
@@ -90,11 +135,11 @@ const Uk = () => {
               </thead>
               <tbody className="text-gray-700">
                 {[
-                  ["University of Oxford", "Oxford", "1"],
-                  ["University of Cambridge", "Cambridge", "2"],
-                  ["Imperial College London", "London", "6"],
+                  ["University of Oxford", "Oxford", "3"],
+                  ["University of Cambridge", "Cambridge", "5"],
+                  ["Imperial College London", "London", "2"],
                   ["University College London (UCL)", "London", "9"],
-                  ["University of Edinburgh", "Edinburgh", "22"],
+                  ["University of Edinburgh", "Edinburgh", "27"],
                 ].map(([name, location, rank], i) => (
                   <tr key={i}>
                     <td className="p-3 border">{name}</td>

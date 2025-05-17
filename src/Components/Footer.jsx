@@ -12,7 +12,7 @@ export default function Footer() {
             It is led by young and experienced professionals.
           </p>
           <div className="flex items-center space-x-4 text-xl text-gray-300">
-            <a href="#" aria-label="Facebook" className="hover:text-white">
+            <a href="https://www.facebook.com/share/1DbNDAGnkM/?mibextid=wwXIfr" aria-label="Facebook" className="hover:text-white">
               <FaFacebook />
             </a>
             <a href="#" aria-label="YouTube" className="hover:text-white">
@@ -21,7 +21,7 @@ export default function Footer() {
             <a href="#" aria-label="Google" className="hover:text-white">
               <FaGoogle />
             </a>
-            <a href="#" aria-label="Instagram" className="hover:text-white">
+            <a href="https://www.instagram.com/globalladdereducationnetwork?igsh=MXY2enQ4MDQzdHQ1eA%3D%3D&utm_source=qr" aria-label="Instagram" className="hover:text-white">
               <FaInstagram />
             </a>
           </div>
@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="flex flex-col justify-start text-right">
           <h2 className="text-xl font-bold mb-4">Head Office</h2>
           <ul className="space-y-3 text-sm text-gray-300">
-            <li className="flex items-start gap-2 justify-end">📍 <span>Old Baneshwor, Kathmandu</span></li>
+            <li className="flex items-start gap-2 justify-end">📍 <span>Old Baneshwor Chowk, Kathmandu</span></li>
             <li className="flex items-start gap-2 justify-end">📞 <span>+977 970-0616287</span></li>
           </ul>
         </div>

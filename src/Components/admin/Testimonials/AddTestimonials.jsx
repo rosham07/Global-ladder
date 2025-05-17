@@ -1,48 +1,51 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 export default function AddTestimonials() {
-  // State to store the form data
   const [testimonial, setTestimonial] = useState({
     name: '',
     message: '',
-    position: '',
-    imageUrl: ''
   });
 
-  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setTestimonial((prevState) => ({
-      ...prevState,
+    setTestimonial((prev) => ({
+      ...prev,
       [name]: value,
     }));
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Submit the testimonial to your backend or API
-    console.log('Testimonial Submitted:', testimonial);
-
-    // Optionally, you can clear the form after submission
-    setTestimonial({
-      name: '',
-      message: '',
-      position: '',
-      imageUrl: ''
-    });
+    try {
+      const response = await axios.post(
+        'http://localhost:5000/api/testimonials/create',
+        testimonial
+      );
+      console.log('Testimonial Submitted:', response.data);
+      toast.success('Testimonial added successfully!');
+      setTestimonial({ name: '', message: '' });
+    } catch (err) {
+      console.error('Error submitting testimonial:', err);
+      const msg =
+        err.response?.data?.message ||
+        'Failed to submit testimonial. Please try again.';
+      toast.error(msg);
+    }
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md">
+    <div className="p-6 bg-white rounded-lg shadow-md max-w-md mx-auto mt-10">
       <h1 className="text-2xl font-semibold mb-4">Add Testimonial</h1>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name input */}
         <div>
-          <label htmlFor="name" className="block text-gray-700">Name</label>
+          <label htmlFor="name" className="block text-gray-700">
+            Name
+          </label>
           <input
-            type="text"
             id="name"
             name="name"
             value={testimonial.name}
@@ -54,7 +57,9 @@ export default function AddTestimonials() {
 
         {/* Message input */}
         <div>
-          <label htmlFor="message" className="block text-gray-700">Testimonial Message</label>
+          <label htmlFor="message" className="block text-gray-700">
+            Testimonial Message
+          </label>
           <textarea
             id="message"
             name="message"
@@ -63,33 +68,6 @@ export default function AddTestimonials() {
             rows="4"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
-          ></textarea>
-        </div>
-
-        {/* Position input */}
-        <div>
-          <label htmlFor="position" className="block text-gray-700">Position</label>
-          <input
-            type="text"
-            id="position"
-            name="position"
-            value={testimonial.position}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-        </div>
-
-        {/* Image URL input */}
-        <div>
-          <label htmlFor="imageUrl" className="block text-gray-700">Image URL</label>
-          <input
-            type="text"
-            id="imageUrl"
-            name="imageUrl"
-            value={testimonial.imageUrl}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
