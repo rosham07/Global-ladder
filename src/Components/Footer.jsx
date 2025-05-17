@@ -1,4 +1,4 @@
-import { FaFacebook, FaYoutube, FaGoogle, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -15,13 +15,10 @@ export default function Footer() {
             <a href="https://www.facebook.com/share/1DbNDAGnkM/?mibextid=wwXIfr" aria-label="Facebook" className="hover:text-white">
               <FaFacebook />
             </a>
-            <a href="#" aria-label="YouTube" className="hover:text-white">
+            <a href="https://www.youtube.com/@globalladdereducationnetwork" aria-label="YouTube" className="hover:text-white">
               <FaYoutube />
             </a>
-            <a href="#" aria-label="Google" className="hover:text-white">
-              <FaGoogle />
-            </a>
-            <a href="https://www.instagram.com/globalladdereducationnetwork?igsh=MXY2enQ4MDQzdHQ1eA%3D%3D&utm_source=qr" aria-label="Instagram" className="hover:text-white">
+              <a href="https://www.instagram.com/globalladdereducationnetwork?igsh=MXY2enQ4MDQzdHQ1eA%3D%3D&utm_source=qr" aria-label="Instagram" className="hover:text-white">
               <FaInstagram />
             </a>
           </div>
