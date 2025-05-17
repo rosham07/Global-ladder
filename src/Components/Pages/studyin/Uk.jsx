@@ -122,37 +122,40 @@ const Uk = () => {
 
           {/* Top Universities */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
-              Top Universities in the UK for Nepali Students
-            </h2>
-            <table className="w-full table-auto text-left border-collapse bg-white rounded-md overflow-hidden shadow">
-              <thead>
-                <tr className="bg-gray-200 text-gray-800">
-                  <th className="p-3 border">University</th>
-                  <th className="p-3 border">Location</th>
-                  <th className="p-3 border">World Ranking*</th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-700">
-                {[
-                  ["University of Oxford", "Oxford", "3"],
-                  ["University of Cambridge", "Cambridge", "5"],
-                  ["Imperial College London", "London", "2"],
-                  ["University College London (UCL)", "London", "9"],
-                  ["University of Edinburgh", "Edinburgh", "27"],
-                ].map(([name, location, rank], i) => (
-                  <tr key={i}>
-                    <td className="p-3 border">{name}</td>
-                    <td className="p-3 border">{location}</td>
-                    <td className="p-3 border">{rank}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p className="text-sm mt-2 text-gray-500">
-              *Based on QS World University Rankings 2024
-            </p>
-          </div>
+  <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+    Top Universities in the UK for Nepali Students
+  </h2>
+  <table className="w-full table-auto text-left border-collapse bg-white rounded-md overflow-hidden shadow">
+    <thead>
+      <tr className="bg-gray-200 text-gray-800">
+        <th className="p-3 border">University</th>
+        <th className="p-3 border">Location</th>
+        <th className="p-3 border">World Ranking*</th>
+      </tr>
+    </thead>
+    <tbody className="text-gray-700">
+      {[
+        ["Imperial College London", "London", "2"],
+        ["University of Oxford", "Oxford", "3"],
+        ["University of Cambridge", "Cambridge", "5"],
+        ["University College London (UCL)", "London", "9"],
+        ["University of Edinburgh", "Edinburgh", "27"],
+      ]
+        .sort((a, b) => parseInt(a[2]) - parseInt(b[2])) // Sort by rank (ascending)
+        .map(([name, location, rank], i) => (
+          <tr key={i}>
+            <td className="p-3 border">{name}</td>
+            <td className="p-3 border">{location}</td>
+            <td className="p-3 border">{rank}</td>
+          </tr>
+        ))}
+    </tbody>
+  </table>
+  <p className="text-sm mt-2 text-gray-500">
+    *Based on QS World University Rankings 2025
+  </p>
+</div>
+
 
           {/* Requirements */}
           <div>

@@ -95,7 +95,8 @@ const Usa = () => {
                   ["MIT", "Cambridge, MA", "1"],
                   ["Caltech", "Pasadena, CA", "10"],
                   ["UC Berkeley", "Berkeley, CA", "12"],
-                ].map(([name, location, rank], i) => (
+                ].sort((a, b) => parseInt(a[2]) - parseInt(b[2])) // Sort by rank (ascending)
+        .map(([name, location, rank], i) => (
                   <tr key={i}>
                     <td className="p-3 border">{name}</td>
                     <td className="p-3 border">{location}</td>
@@ -105,7 +106,7 @@ const Usa = () => {
               </tbody>
             </table>
             <p className="text-sm mt-2 text-gray-500">
-              *Based on QS World University Rankings 2024
+              *Based on QS World University Rankings 2025
             </p>
           </div>
 

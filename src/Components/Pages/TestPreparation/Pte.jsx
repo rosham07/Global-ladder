@@ -89,27 +89,29 @@ const Pte = () => {
 
         {/* Fees */}
         <section className="bg-white p-8 rounded-2xl shadow-sm">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">PTE Fees in Nepal</h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-black text-white">
-              <thead className="bg-gray-800">
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Test Type</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Fee (NPR)</th>
-                </tr>
-              </thead>
-              <tbody className="bg-black divide-y divide-gray-700">
-                {testData.map((item, index) => (
-                  <tr key={index} className={index % 2 === 0 ? "" : "bg-gray-900"}>
-                    <td className="px-6 py-4 whitespace-nowrap">{item.type}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">{item.fee}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p className="text-gray-500 mt-2 text-sm">Fees may vary slightly depending on exchange rates and applicable taxes.</p>
-          </div>
-        </section>
+  <h2 className="text-2xl font-semibold text-gray-800 mb-4">PTE Fees in Nepal</h2>
+  <div className="overflow-x-auto">
+    <table className="min-w-full table-auto text-left border-collapse rounded overflow-hidden shadow">
+      <thead className="bg-gray-800 text-white">
+        <tr>
+          <th className="px-6 py-3 text-xs font-medium uppercase tracking-wider">Test Type</th>
+          <th className="px-6 py-3 text-xs font-medium uppercase tracking-wider">Fee (NPR)</th>
+        </tr>
+      </thead>
+      <tbody className="text-gray-800 bg-white">
+        {testData.map((item, index) => (
+          <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}>
+            <td className="px-6 py-4 whitespace-nowrap">{item.type}</td>
+            <td className="px-6 py-4 whitespace-nowrap">{item.fee.toLocaleString('en-NP')}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p className="text-gray-500 mt-2 text-sm">
+      Fees may vary slightly depending on exchange rates and applicable taxes.
+    </p>
+  </div>
+</section>
 
         {/* Tips */}
         <section className="bg-white p-8 rounded-2xl shadow-sm">

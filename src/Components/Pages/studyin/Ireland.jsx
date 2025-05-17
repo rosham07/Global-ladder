@@ -69,7 +69,7 @@ const Ireland = () => {
                 <tr><td className="p-3 border">Dublin City University</td><td className="p-3 border">Dublin</td><td className="p-3 border">421</td></tr>
               </tbody>
             </table>
-            <p className="text-sm mt-2 text-gray-500">*Source: QS World University Rankings 2024</p>
+            <p className="text-sm mt-2 text-gray-500">*Source: QS World University Rankings 2025</p>
           </div>
 
           {/* Application Process */}

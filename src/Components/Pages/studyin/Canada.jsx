@@ -143,7 +143,10 @@ const Canada = () => {
                   ["McGill University", "Montreal, Quebec", "29"],
                   ["University of Alberta", "Edmonton, Alberta", "96"],
                   ["McMaster University", "Hamilton, Ontario", "176"],
-                ].map(([name, location, rank], i) => (
+                ].sort((a, b) => parseInt(a[2]) - parseInt(b[2])) // Sort by rank (ascending)
+        .map(([name, location, rank], i) => (
+          
+        
                   <tr key={i}>
                     <td className="p-3 border">{name}</td>
                     <td className="p-3 border">{location}</td>
