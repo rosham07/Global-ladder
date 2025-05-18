@@ -4,7 +4,7 @@ const NewZealand = () => {
   return (
     <section className="bg-gray-100 text-gray-800 font-sans">
       {/* Hero Section */}
-      <section className="relative bg-green-900 text-white py-24 text-center">
+      <section className="relative bg-gray-900 text-white py-24 text-center">
   <img
     src="./images/new_zealand.jpg"
     alt="new zealand Scenery"
@@ -21,7 +21,7 @@ const NewZealand = () => {
       <div className="max-w-5xl mx-auto pt-16 pb-16 px-6 md:px-16 space-y-16">
         {/* Title */}
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-green-700 mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4">
             A Complete Guide for Nepali Students
           </h2>
           <p className="text-lg md:text-xl text-gray-600">
@@ -31,7 +31,7 @@ const NewZealand = () => {
 
         {/* Key Facts */}
          <div className="max-w-2xl mx-auto my-10 bg-white rounded-xl shadow-lg overflow-hidden">
-      <h2 className="text-xl md:text-2xl font-semibold text-center text-green-900 bg-green-100 py-4">
+      <h2 className="text-xl md:text-2xl font-semibold text-center text-blue-900 bg-blue-100 py-4">
         Key Facts to Study in New Zealand
       </h2>
       <table className="w-full text-left text-gray-800">
@@ -77,7 +77,7 @@ const NewZealand = () => {
 
         {/* Benefits for Nepali Students */}
         <div>
-          <h2 className="text-3xl font-semibold text-green-600 mb-4">Benefits of Studying in New Zealand for Nepali Students</h2>
+          <h2 className="text-3xl font-semibold text-blue-800 mb-4">Benefits of Studying in New Zealand for Nepali Students</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {[
               {
@@ -107,10 +107,10 @@ const NewZealand = () => {
 
         {/* Top Universities */}
         <div>
-          <h2 className="text-3xl font-semibold text-green-600 mb-4">Top Universities in New Zealand for Nepali Students</h2>
+          <h2 className="text-3xl font-semibold text-blue-800 mb-4">Top Universities in New Zealand for Nepali Students</h2>
           <table className="w-full table-auto text-left border-collapse bg-white shadow-sm">
             <thead>
-              <tr className="bg-green-100 text-green-700">
+              <tr className="bg-blue-100 text-blue-700">
                 <th className="p-3 border">University</th>
                 <th className="p-3 border">Location</th>
                 <th className="p-3 border">World Ranking*</th>
@@ -137,7 +137,7 @@ const NewZealand = () => {
 
         {/* Requirements */}
         <div>
-          <h2 className="text-3xl font-semibold text-green-600 mb-4">Requirements to Study in New Zealand for Nepali Students</h2>
+          <h2 className="text-3xl font-semibold text-blue-800 mb-4">Requirements to Study in New Zealand for Nepali Students</h2>
           <ul className="list-disc list-inside text-lg space-y-2">
             <li>Academic transcripts and certificates (SLC, +2, Bachelor's degree).</li>
             <li>Proof of English proficiency (IELTS, TOEFL, PTE, etc.).</li>
@@ -150,7 +150,7 @@ const NewZealand = () => {
 
         {/* Intakes */}
         <div>
-          <h2 className="text-3xl font-semibold text-green-600 mb-4">Intakes in New Zealand for Nepali Students</h2>
+          <h2 className="text-3xl font-semibold text-blue-800 mb-4">Intakes in New Zealand for Nepali Students</h2>
           <p className="mb-4 text-lg">
             New Zealand universities generally have two main intakes:
           </p>

@@ -23,7 +23,7 @@ const Usa = () => {
         <div className="max-w-5xl mx-auto space-y-16">
           {/* Title Section */}
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-red-600 mb-4">
               Study in the USA: A Complete Guide for Nepali Students
             </h2>
             <p className="text-lg md:text-xl text-gray-600">
@@ -33,7 +33,7 @@ const Usa = () => {
 
           {/* Key Facts */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">Key Facts About Studying in the USA</h2>
+            <h2 className="text-3xl font-semibold text-red-600 mb-4">Key Facts About Studying in the USA</h2>
             <ul className="list-disc list-inside space-y-2 text-lg text-gray-700">
               <li>Over 4,000 accredited universities and colleges.</li>
               <li>World-renowned institutions such as Harvard, MIT, and Stanford.</li>
@@ -45,7 +45,7 @@ const Usa = () => {
 
           {/* Benefits for Nepali Students */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-3xl font-semibold text-red-600 mb-4">
               Benefits of Studying in the USA for Nepali Students
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -77,12 +77,12 @@ const Usa = () => {
 
           {/* Top Universities */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-3xl font-semibold text-red-600 mb-4">
               Top Universities in the USA for Nepali Students
             </h2>
             <table className="w-full table-auto text-left border-collapse bg-white rounded-md overflow-hidden shadow">
               <thead>
-                <tr className="bg-gray-200 text-gray-800">
+                <tr className="bg-red-200 text-red-600">
                   <th className="p-3 border">University</th>
                   <th className="p-3 border">Location</th>
                   <th className="p-3 border">World Ranking*</th>
@@ -112,7 +112,7 @@ const Usa = () => {
 
           {/* Requirements */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-3xl font-semibold text-red-600 mb-4">
               Requirements to Study in the USA for Nepali Students
             </h2>
             <ul className="list-disc list-inside text-lg space-y-2 text-gray-700">
@@ -127,7 +127,7 @@ const Usa = () => {
 
           {/* Intakes */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-3xl font-semibold text-red-600 mb-4">
               Intakes in the USA for Nepali Students
             </h2>
             <p className="mb-4 text-lg text-gray-700">

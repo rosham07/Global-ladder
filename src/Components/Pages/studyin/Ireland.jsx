@@ -4,7 +4,7 @@ const Ireland = () => {
   return (
     <>
       {/* Hero Section */}
-<section className="relative bg-green-900 text-white py-24 text-center">
+<section className="relative bg-gray-900 text-white py-24 text-center">
   <img
     src="./images/Ireland.jpg"
     alt="Ireland Scenery"

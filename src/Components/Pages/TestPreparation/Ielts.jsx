@@ -7,7 +7,7 @@ export default function Ielts() {
   const faqs = [
     {
       question: "How much does IELTS cost in Nepal?",
-      answer: "The test fee in Nepal is usually around NPR 25,000–27,000 depending on the center.",
+      answer: "The test fee in Nepal is usually around NPR 28,000–33,000 depending on the center.",
     },
     {
       question: "Which is better – Academic or General Training?",

@@ -23,7 +23,7 @@ const Uk = () => {
         <div className="max-w-5xl mx-auto space-y-16">
           {/* Title Section */}
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-red-600 mb-4">
               A Complete Guide for Nepali Students
             </h2>
             <p className="text-lg md:text-xl text-gray-600">
@@ -33,7 +33,7 @@ const Uk = () => {
 
           {/* Key Facts */}
           <div className="max-w-2xl mx-auto my-10 bg-white rounded-xl shadow-lg overflow-hidden">
-      <h2 className="text-xl md:text-2xl font-semibold text-center text-blue-900 bg-blue-100 py-4">
+      <h2 className="text-xl md:text-2xl font-semibold text-center text-red-600 bg-red-200 py-4">
         Key Facts to Study in UK
       </h2>
       <table className="w-full text-left text-gray-800">
@@ -90,7 +90,7 @@ const Uk = () => {
 
           {/* Benefits for Nepali Students */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-3xl font-semibold text-red-600 mb-4">
               Benefits of Studying in the UK for Nepali Students
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -122,12 +122,12 @@ const Uk = () => {
 
           {/* Top Universities */}
           <div>
-  <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+  <h2 className="text-3xl font-semibold text-red-600 mb-4">
     Top Universities in the UK for Nepali Students
   </h2>
   <table className="w-full table-auto text-left border-collapse bg-white rounded-md overflow-hidden shadow">
     <thead>
-      <tr className="bg-gray-200 text-gray-800">
+      <tr className="bg-red-200 text-red-600">
         <th className="p-3 border">University</th>
         <th className="p-3 border">Location</th>
         <th className="p-3 border">World Ranking*</th>
@@ -159,7 +159,7 @@ const Uk = () => {
 
           {/* Requirements */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-3xl font-semibold text-red-600 mb-4">
               Requirements to Study in the UK for Nepali Students
             </h2>
             <ul className="list-disc list-inside text-lg space-y-2 text-gray-700">
@@ -174,7 +174,7 @@ const Uk = () => {
 
           {/* Intakes */}
           <div>
-            <h2 className="text-3xl font-semibold text-gray-700 mb-4">
+            <h2 className="text-3xl font-semibold text-red-600 mb-4">
               Intakes in the UK for Nepali Students
             </h2>
             <p className="mb-4 text-lg text-gray-700">

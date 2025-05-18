@@ -23,7 +23,7 @@ const Australia = () => {
 
         {/* Title Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4">
             A Complete Guide for Nepali Students
           </h2>
           <p className="text-lg md:text-xl text-gray-600">
@@ -33,7 +33,7 @@ const Australia = () => {
 
         {/* Key Facts */}
         <div className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-700 mb-6 text-center">Key Facts to Study in Australia</h2>
+          <h2 className="text-3xl font-semibold text-blue-800 mb-6 text-center">Key Facts to Study in Australia</h2>
           <div className="border rounded-lg overflow-hidden shadow bg-white">
             <table className="w-full text-sm md:text-base text-left text-gray-700">
               <tbody>
@@ -86,7 +86,7 @@ const Australia = () => {
 
         {/* Benefits Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-700 mb-4">Benefits of Studying in Australia for Nepali Students</h2>
+          <h2 className="text-3xl font-semibold text-blue-800 mb-4">Benefits of Studying in Australia for Nepali Students</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {[
               {
@@ -116,10 +116,10 @@ const Australia = () => {
 
         {/* Top Universities */}
         <div className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-700 mb-4">Top Universities in Australia for Nepali Students</h2>
+          <h2 className="text-3xl font-semibold text-blue-800 mb-4">Top Universities in Australia for Nepali Students</h2>
           <table className="w-full table-auto text-left border-collapse bg-white rounded-md overflow-hidden shadow">
             <thead>
-              <tr className="bg-gray-200 text-gray-800">
+              <tr className="bg-blue-200 text-blue-800">
                 <th className="p-3 border">University</th>
                 <th className="p-3 border">Location</th>
                 <th className="p-3 border">World Ranking*</th>
@@ -147,7 +147,7 @@ const Australia = () => {
 
         {/* Requirements */}
         <div className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-700 mb-4">Requirements to Study in Australia for Nepali Students</h2>
+          <h2 className="text-3xl font-semibold text-blue-800 mb-4">Requirements to Study in Australia for Nepali Students</h2>
           <ul className="list-disc list-inside text-lg space-y-2 text-gray-700">
             <li>Valid passport and offer letter from a recognized Australian university.</li>
             <li>Proof of English proficiency (IELTS, TOEFL, or PTE).</li>
@@ -160,7 +160,7 @@ const Australia = () => {
 
         {/* Intakes */}
         <div className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-700 mb-4">Intakes in Australia for Nepali Students</h2>
+          <h2 className="text-3xl font-semibold text-blue-800 mb-4">Intakes in Australia for Nepali Students</h2>
           <p className="mb-4 text-lg text-gray-700">
             Australian universities typically have three intakes each year:
           </p>
