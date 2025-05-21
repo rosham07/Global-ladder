@@ -1,24 +1,23 @@
 import { createContext, useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const navigate = useNavigate();
 
+  // login returns boolean success; navigation done outside here
   const login = (username, password) => {
-    if (username === "admin" && password === "admin") {
+    if (username === "Nischal07" && password === "Zyan@12!") {
       setIsAuthenticated(true);
-      navigate("/dashboard");
+      return true;
     } else {
       alert("Invalid credentials");
+      return false;
     }
   };
 
   const logout = () => {
     setIsAuthenticated(false);
-    navigate("/");
   };
 
   return (

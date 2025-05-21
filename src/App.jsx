@@ -1,4 +1,3 @@
-// src/App.jsx
 import './App.css';
 import AdminLogin from './Components/admin/AdminLogin.jsx';
 import { ToastContainer } from 'react-toastify';
@@ -6,6 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // Components
 import ScrollToTop from './Components/ScrollToTop.jsx';
+import ProtectedRoute from './Components/ProtectedRoute.jsx';
+import { AuthProvider } from './Components/Context/AuthContext.jsx';
 
 // Pages
 import Home from './Components/Pages/Home.jsx';
@@ -37,7 +38,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './Components/admin/Dashboard.jsx';
 import AddTestimonials from './Components/admin/Testimonials/AddTestimonials.jsx';
 import ListTestimonials from './Components/admin/Testimonials/ListTestimonials.jsx';
-import AddBlogs from './Components/admin/Blogs/Addblogs.jsx';
+import AddBlogs from './Components/admin/Blogs/AddBlogs.jsx';
 import ListBlogs from './Components/admin/Blogs/ListBlogs.jsx';
 
 // Public Pages
@@ -48,54 +49,65 @@ import BlogDetail from './Components/Pages/BlogDetail.jsx';
 function App() {
   return (
     <HashRouter>
-      {/* Toast container must be in the tree for toasts to render */}
-      <ToastContainer 
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        pauseOnHover
-      />
+      <AuthProvider> {/* ✅ Moved inside HashRouter so useNavigate works */}
+        <ToastContainer 
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          pauseOnHover
+        />
 
-      <ScrollToTop />
-      <Routes>
-        {/* Public pages wrapped with MainLayout */}
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<AboutUs />} />
-          <Route path="contact" element={<Contact />} />
+        <ScrollToTop />
 
-          {/* Study In */}
-          <Route path="studyin/australia" element={<Australia />} />
-          <Route path="studyin/uk" element={<Uk />} />
-          <Route path="studyin/canada" element={<Canada />} />
-          <Route path="studyin/ireland" element={<Ireland />} />
-          <Route path="studyin/newzealand" element={<NewZealand />} />
-          <Route path="studyin/usa" element={<Usa />} />
+        <Routes>
+          {/* Public Pages (wrapped in MainLayout) */}
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<AboutUs />} />
+            <Route path="contact" element={<Contact />} />
 
-          {/* Test Preparation */}
-          <Route path="testpreparation/ielts" element={<Ielts />} />
-          <Route path="testpreparation/pte" element={<Pte />} />
-          <Route path="testpreparation/toefl" element={<Toefl />} />
-          <Route path="testpreparation/sat" element={<Sat />} />
-          <Route path="testpreparation/gre" element={<Gre />} />
+            {/* Study In Routes */}
+            <Route path="studyin/australia" element={<Australia />} />
+            <Route path="studyin/uk" element={<Uk />} />
+            <Route path="studyin/canada" element={<Canada />} />
+            <Route path="studyin/ireland" element={<Ireland />} />
+            <Route path="studyin/newzealand" element={<NewZealand />} />
+            <Route path="studyin/usa" element={<Usa />} />
 
-          {/* Testimonials & Blogs */}
-          <Route path="testimonials" element={<Testimonials />} />
-          <Route path="blog" element={<Blogs />} />
-          <Route path="blog/:id" element={<BlogDetail />} />
-        </Route>
+            {/* Test Preparation Routes */}
+            <Route path="testpreparation/ielts" element={<Ielts />} />
+            <Route path="testpreparation/pte" element={<Pte />} />
+            <Route path="testpreparation/toefl" element={<Toefl />} />
+            <Route path="testpreparation/sat" element={<Sat />} />
+            <Route path="testpreparation/gre" element={<Gre />} />
 
-        {/* Admin/Dashboard */}
-        <Route path="/admin" element={<AdminLogin />} />
-        <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="testimonials/add" element={<AddTestimonials />} />
-          <Route path="testimonials/list" element={<ListTestimonials />} />
-          <Route path="blogs/add" element={<AddBlogs />} />
-          <Route path="blogs/list" element={<ListBlogs />} />
-        </Route>
-      </Routes>
+            {/* Blog & Testimonial Public Routes */}
+            <Route path="testimonials" element={<Testimonials />} />
+            <Route path="blogs" element={<Blogs />} />
+            <Route path="blogs/:id" element={<BlogDetail />} />
+          </Route>
+
+          {/* Admin Login Page (Public) */}
+          <Route path="/admin" element={<AdminLogin />} />
+
+          {/* Protected Admin Dashboard and Sub-Routes */}
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          >
+            <Route path="testimonials/add" element={<AddTestimonials />} />
+            <Route path="testimonials/list" element={<ListTestimonials />} />
+            <Route path="blogs/add" element={<AddBlogs />} />
+            <Route path="blogs/list" element={<ListBlogs />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
     </HashRouter>
   );
 }

@@ -1,8 +1,57 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSending, setIsSending] = useState(false); // Loading state
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSending(true); // Start loading
+
+    emailjs
+      .sendForm(
+        'service_wmkk7tq', // Your EmailJS service ID
+        'template_t75ipoi', // Your EmailJS template ID
+        form.current,
+        'ya2ZwKrPM8IsHgCg0' // Your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsModalOpen(true);   // Show thank you modal
+          form.current.reset();   // Reset form
+          setIsSending(false);    // Stop loading
+        },
+        (error) => {
+          console.log(error.text);
+          alert('Failed to send message. Please try again later.');
+          setIsSending(false);    // Stop loading on error
+        }
+      );
+  };
+
   return (
     <main className="pt-20 font-sans text-gray-800 bg-gray-50">
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">Thank You!</h3>
+            <p className="text-gray-600 mb-6">
+              Thank you for sending us an email. We will get back to you soon.
+            </p>
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="px-6 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="bg-gray-700 text-white py-20 text-center">
         <div className="max-w-4xl mx-auto px-4">
@@ -17,11 +66,12 @@ const Contact = () => {
           {/* Form */}
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">Leave us a message</h2>
-            <form className="space-y-5">
+            <form ref={form} onSubmit={sendEmail} className="space-y-5">
               <div>
                 <label className="block mb-1 font-medium text-gray-700">Name</label>
                 <input
                   type="text"
+                  name="user_name"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
                   placeholder="Your full name"
                   required
@@ -31,6 +81,7 @@ const Contact = () => {
                 <label className="block mb-1 font-medium text-gray-700">Email</label>
                 <input
                   type="email"
+                  name="user_email"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
                   placeholder="Your email address"
                   required
@@ -40,23 +91,30 @@ const Contact = () => {
                 <label className="block mb-1 font-medium text-gray-700">Subject</label>
                 <input
                   type="text"
+                  name="subject"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
                   placeholder="Inquiry subject"
+                  required
                 />
               </div>
               <div>
                 <label className="block mb-1 font-medium text-gray-700">Message</label>
                 <textarea
+                  name="message"
                   rows="5"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
                   placeholder="Type your message here..."
+                  required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg shadow transition"
+                disabled={isSending}
+                className={`bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg shadow transition ${
+                  isSending ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
               >
-                Send Message
+                {isSending ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
@@ -68,7 +126,7 @@ const Contact = () => {
               We're here to answer your questions and help you take the next step in your international education journey.
             </p>
             <ul className="space-y-4 text-gray-800 text-lg">
-              <li><strong>📍 Address:</strong> Old Baneshwor, Kathmandu, Nepal</li>
+              <li><strong>📍 Address:</strong> Old Baneshwor Chowk, Kathmandu, Nepal</li>
               <li><strong>📞 Phone:</strong> +977 970-0616287</li>
               <li><strong>📧 Email:</strong> globalladdereducation@gmail.com</li>
               <li><strong>🕒 Hours:</strong> Sunday – Friday: 10:00 AM – 6:00 PM</li>
@@ -90,8 +148,6 @@ const Contact = () => {
           className="border-0"
         ></iframe>
       </section>
-
-      
     </main>
   );
 };
