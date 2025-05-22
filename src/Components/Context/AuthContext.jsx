@@ -1,14 +1,34 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // Initialize state from localStorage to persist on reload
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    try {
+      const storedAuth = localStorage.getItem("isAuthenticated");
+      return storedAuth === "true";
+    } catch {
+      return false; // fallback if localStorage access fails
+    }
+  });
 
-  // login returns boolean success; navigation done outside here
+  // Optional: sync state with localStorage if it changes elsewhere
+  useEffect(() => {
+    try {
+      const storedAuth = localStorage.getItem("isAuthenticated");
+      if (storedAuth === "true" && !isAuthenticated) {
+        setIsAuthenticated(true);
+      }
+    } catch (err) {
+      console.error("Failed to read auth from localStorage", err);
+    }
+  }, [isAuthenticated]);
+
   const login = (username, password) => {
     if (username === "Nischal07" && password === "Zyan@12!") {
       setIsAuthenticated(true);
+      localStorage.setItem("isAuthenticated", "true");
       return true;
     } else {
       alert("Invalid credentials");
@@ -18,6 +38,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     setIsAuthenticated(false);
+    localStorage.removeItem("isAuthenticated");
   };
 
   return (
