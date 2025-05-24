@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/Global-ladder/', 
+  base: '/', // ✅ Important: ensures correct paths for Netlify
   plugins: [react(), tailwindcss()],
 })
-
