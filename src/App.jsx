@@ -38,7 +38,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './Components/admin/Dashboard.jsx';
 import AddTestimonials from './Components/admin/Testimonials/AddTestimonials.jsx';
 import ListTestimonials from './Components/admin/Testimonials/ListTestimonials.jsx';
-import AddBlogs from './Components/admin/Blogs/AddBlogs.jsx';
+import AddBlogs from './Components/admin/Blogs/Addblogs.jsx';
 import ListBlogs from './Components/admin/Blogs/ListBlogs.jsx';
 
 // Public Pages
@@ -96,9 +96,9 @@ function App() {
           <Route
             path="/dashboard"
             element={
-              <ProtectedRoute>
+              // <ProtectedRoute>
                 <Dashboard />
-              </ProtectedRoute>
+              // </ProtectedRoute>
             }
           >
             <Route path="testimonials/add" element={<AddTestimonials />} />

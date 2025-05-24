@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
 import { toast } from "react-toastify";
@@ -12,6 +12,14 @@ const AdminLogin = () => {
 
   const { login } = useAuth();
 
+  // Check localStorage or auth state to redirect if already logged in
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+    if (isAuthenticated === "true") {
+      navigate("/dashboard");
+    }
+  }, [navigate]);
+
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -21,8 +29,10 @@ const AdminLogin = () => {
     }
 
     setError("");
-    const success = login(username, password);
+    const success = login(username, password); // Should return true/false
     if (success) {
+      localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("username", username);
       toast.success("Logged in successfully!");
       navigate("/dashboard");
     } else {
@@ -35,8 +45,11 @@ const AdminLogin = () => {
       <div className="w-full max-w-md bg-gray-200 shadow-md rounded-2xl p-8">
         <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6">Sign In</h2>
         <form onSubmit={handleLogin} className="space-y-5">
+          {/* Username */}
           <div>
-            <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username</label>
+            <label htmlFor="username" className="block text-sm font-medium text-gray-700">
+              Username
+            </label>
             <input
               type="text"
               id="username"
@@ -47,8 +60,11 @@ const AdminLogin = () => {
             />
           </div>
 
+          {/* Password */}
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              Password
+            </label>
             <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
@@ -61,15 +77,17 @@ const AdminLogin = () => {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-4 top-3 text-gray-500"
+                className="absolute right-4 top-3 text-gray-500 text-sm"
               >
                 {showPassword ? "Hide" : "Show"}
               </button>
             </div>
           </div>
 
+          {/* Error */}
           {error && <div className="text-sm text-red-500">{error}</div>}
 
+          {/* Submit */}
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
